@@ -7,12 +7,13 @@
     <author-email></author-email>
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
-    <unique-id>3swx4wlo29sjx</unique-id>
-    <saved-with-version>20600</saved-with-version>
+    <unique-id>3bb2dyqx0ja01</unique-id>
+    <saved-with-version>19500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -35,23 +36,36 @@
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
-        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Physics engine">Box2D web</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Wall" sid="7053561105930771">
+        <object-type name="Sprite" sid="3785632189633142">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Solid" sid="249295966229739">
+                <behavior-type name="Solid" sid="5688868866117751">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6724459443405139" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8428402881699794" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="4799823387083699">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="8Direction" sid="3121801718664567">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="924527946520962" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
