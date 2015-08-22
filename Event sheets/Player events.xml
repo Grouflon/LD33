@@ -19,6 +19,14 @@
                     <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="-4" name="Set position to another object" sid="1627811227381867" type="PlayerSprite">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="982896933790367" type="PlayerSprite">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9795959375078321">
@@ -138,6 +146,52 @@
             <actions>
                 <action id="-14" name="Toggle boolean" sid="185594973494134" type="Player">
                     <param id="0" name="Instance variable">psycho</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8566539416045796">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="4400069761052984" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2221692155814901" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;normal_walk&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1001135392606551">
+            <conditions>
+                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="8755220597383396" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4252588431669953" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;normal_idle&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="46082344014569">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1017303065290945" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="5742504302887479" type="PlayerSprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4917476975561126">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5866415685972562" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7076312735157389" type="PlayerSprite">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
