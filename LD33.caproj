@@ -249,6 +249,32 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PlayerSprite" sid="9203566949472337">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="9977932967067907">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="normal_idle" pingpong="0" repeatcount="1" repeatto="0" sid="7178066129631104" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                    </animation>
+                    <animation framecount="6" loop="1" name="normal_walk" pingpong="0" repeatcount="1" repeatto="0" sid="167057134454185" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="HUD">
             <object-type name="GameOver" sid="8030903946665176">
