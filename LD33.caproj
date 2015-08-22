@@ -58,6 +58,11 @@
             </object-type>
             <object-type name="Wall" sid="7133245187746157">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="5392771946286376">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4415491050289943" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.333333" />
@@ -106,9 +111,9 @@
         <object-type name="Victim" sid="9950419379572761">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="alertCooldown" sid="9836510245621301" type="number" />
-                <instance-variable name="hasLineOfSight" sid="1381127663453941" type="boolean" />
-                <instance-variable name="alerted" sid="676568366812382" type="boolean" />
+                <instance-variable name="LOShelper1" sid="4356332267924742" type="number" />
+                <instance-variable name="LOShelper2" sid="5194777165668062" type="number" />
+                <instance-variable name="seein" sid="9975491277591305" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="991920790542147">
@@ -118,12 +123,6 @@
                     <behavior id="Pathfinding" />
                 </behavior-type>
             </behaviors>
-            <container>
-                <type>Victim</type>
-                <type>AlertIcon</type>
-                <type>LineOfSightIcon</type>
-                <type>LineOfSight</type>
-            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7854747944303131" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.8125">
@@ -142,12 +141,11 @@
         </object-type>
         <object-type name="LineOfSight" sid="9703060735341475">
             <plugin id="Sprite" />
-            <container>
-                <type>Victim</type>
-                <type>AlertIcon</type>
-                <type>LineOfSightIcon</type>
-                <type>LineOfSight</type>
-            </container>
+            <behaviors>
+                <behavior-type name="Pin" sid="548039461705395">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1457843444055419" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="1" />
@@ -156,12 +154,6 @@
         </object-type>
         <object-type name="LineOfSightIcon" sid="6430469364755653">
             <plugin id="Sprite" />
-            <container>
-                <type>Victim</type>
-                <type>AlertIcon</type>
-                <type>LineOfSightIcon</type>
-                <type>LineOfSight</type>
-            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5885396473621805" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -170,12 +162,6 @@
         </object-type>
         <object-type name="AlertIcon" sid="2714994897665693">
             <plugin id="Sprite" />
-            <container>
-                <type>Victim</type>
-                <type>AlertIcon</type>
-                <type>LineOfSightIcon</type>
-                <type>LineOfSight</type>
-            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5212331210011401" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -217,6 +203,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>Layout 1 events.xml</event-sheet>
+        <event-sheet>Victim events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="411" />
