@@ -3,46 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Victim events</name>
     <events>
-        <event-block sid="7776942771221947">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="3977203385390071" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1943551476121584" type="Victim">
-                    <param id="0" name="Obstacle">Wall</param>
-                </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6239740820892646" type="Victim">
-                    <param id="0" name="Obstacle">PathfindingHelper</param>
-                </action>
-                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="1353412234814611" type="Victim" />
-            </actions>
-        </event-block>
-        <event-block sid="3280758537546376">
-            <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6159781742288392" type="Victim">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="7178272272410397" type="Victim">
-                    <param id="0" name="Instance variable">seein</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="418497820116567">
-            <conditions>
-                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="6070692097972327" type="Victim">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="7201776728014681" type="Victim">
-                    <param id="0" name="Instance variable">seein</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="9158401043328991" title="Debug">
             <sub-events>
                 <event-block sid="3252853184871219">
@@ -66,7 +26,7 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="6019981791058621" type="Victim">
-                            <param id="0" name="Instance variable">LOShelper1</param>
+                            <param id="0" name="Instance variable">LOShelper1UID</param>
                             <param id="1" name="Value">LineOfSight.UID</param>
                         </action>
                     </actions>
@@ -92,7 +52,7 @@
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="3244793103670188" type="Victim">
-                            <param id="0" name="Instance variable">LOShelper2</param>
+                            <param id="0" name="Instance variable">LOShelper2UID</param>
                             <param id="1" name="Value">LineOfSight.UID</param>
                         </action>
                     </actions>
@@ -101,7 +61,7 @@
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="8593871217551922" type="Victim" />
                         <condition id="-14" name="Pick by unique ID" sid="6194182530523203" type="LineOfSight">
-                            <param id="0" name="Unique ID">Victim.LOShelper1</param>
+                            <param id="0" name="Unique ID">Victim.LOShelper1UID</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -112,7 +72,7 @@
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="8886594373099622" type="Victim" />
                         <condition id="-14" name="Pick by unique ID" sid="1867595747378223" type="LineOfSight">
-                            <param id="0" name="Unique ID">Victim.LOShelper2</param>
+                            <param id="0" name="Unique ID">Victim.LOShelper2UID</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -121,5 +81,126 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7776942771221947">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3977203385390071" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1943551476121584" type="Victim">
+                    <param id="0" name="Obstacle">Wall</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6239740820892646" type="Victim">
+                    <param id="0" name="Obstacle">PathfindingHelper</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="1353412234814611" type="Victim" />
+            </actions>
+        </event-block>
+        <event-block sid="3280758537546376">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6159781742288392" type="Victim">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7415917108019795" type="Victim">
+                    <param id="0" name="Instance variable">alert</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2479013293125566" type="Player">
+                    <param id="0" name="Instance variable">psycho</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7178272272410397" type="Victim">
+                    <param id="0" name="Instance variable">alert</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="2564730897850558" type="Victim">
+                    <param id="0" name="X">Exit.X</param>
+                    <param id="1" name="Y">Exit.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3068577299828538">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="4318455923834191" type="Victim" />
+                <condition id="-8" name="Is boolean instance variable set" sid="8767546409484025" type="Victim">
+                    <param id="0" name="Instance variable">killed</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7146580794636047" type="Victim">
+                    <param id="0" name="Object">Corpse</param>
+                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3500250935587053">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="9610374038259627" type="Victim" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="7365898881168509" type="Victim" />
+            </actions>
+        </event-block>
+        <event-block sid="7851989741934904">
+            <conditions>
+                <condition id="-18" name="On created" sid="7324181604057136" type="Victim" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="6168440789737123" type="Victim">
+                    <param id="0" name="Object">VictimSprite</param>
+                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="3934118852623838" type="VictimSprite">
+                    <param id="0" name="Object">Victim</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="348096723123578" type="Victim">
+                    <param id="0" name="Instance variable">spriteUID</param>
+                    <param id="1" name="Value">VictimSprite.UID</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8479257600286563" type="VictimSprite">
+                    <param id="0" name="Pin to">Victim</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2040035602354186">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="3806553298022402" type="Victim" />
+                <condition id="-14" name="Pick by unique ID" sid="2883785164227075" type="VictimSprite">
+                    <param id="0" name="Unique ID">Victim.spriteUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1567343530618037" type="VictimSprite" />
+            </actions>
+        </event-block>
+        <event-block sid="418497820116567">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6128250040777054" type="Victim">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="2843431696139695" type="Victim">
+                    <param id="0" name="Instance variable">seePlayer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2937528586661082">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="747611016191864" type="Victim">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="2188991012828042" type="Victim">
+                    <param id="0" name="Instance variable">seePlayer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

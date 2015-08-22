@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Noise events</name>
+    <events>
+        <event-block sid="1013041698171676">
+            <conditions>
+                <condition id="0" name="On click" sid="9054173421849521" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="2908219460329109" type="System">
+                    <param id="0" name="Object to create">comeNoise</param>
+                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1150622846521753">
+            <conditions>
+                <condition id="0" name="On click" sid="5524150431357852" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="334195934415797" type="System">
+                    <param id="0" name="Object to create">fleeNoise</param>
+                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6079655880900181">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4206239467627356" type="comeNoise">
+                    <param id="0" name="Instance variable">range</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">distance(comeNoise.X, comeNoise.Y, Victim.X, Victim.Y)</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="6481958044933828" type="System">
+                    <param id="0" name="Object">Victim</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="5616767035227212" type="System">
+                    <param id="0" name="Object">comeNoise</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="8413531982126003" type="Victim">
+                    <param id="0" name="X">comeNoise.X + random(-20, 20)</param>
+                    <param id="1" name="Y">comeNoise.Y + random(-20, 20)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4216407455685702">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1028474509798013" type="fleeNoise">
+                    <param id="0" name="Instance variable">range</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">distance(fleeNoise.X, fleeNoise.Y, Victim.X, Victim.Y)</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="7737790523983804" type="System">
+                    <param id="0" name="Object">Victim</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="3025751759500855" type="System">
+                    <param id="0" name="Object">fleeNoise</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="3779762106910308" type="Victim">
+                    <param id="0" name="Instance variable">alert</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="8759319706154485" type="Victim">
+                    <param id="0" name="X">Exit.X</param>
+                    <param id="1" name="Y">Exit.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2134344241603906">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4535666021015741" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7152318968963705">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="6413258699702727" type="System">
+                            <param id="0" name="Object">comeNoise</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2284515008412854" type="comeNoise" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1563005671302048">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3910728153985387" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="514940871885581">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8488265953050082" type="System">
+                            <param id="0" name="Object">fleeNoise</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6198454935042557" type="fleeNoise" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
