@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Layout 1 events</name>
+    <events>
+        <include>Victim events</include>
+        <event-group description="" sid="5413792551487313" title="Player">
+            <sub-events>
+                <event-block sid="8890797299240319">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="5146755566833504" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="7399024420702701" type="KillZone">
+                            <param id="0" name="Object">Player</param>
+                            <param id="1" name="Image point (optional)">&quot;Killzone&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="4469185511265913" type="KillZone">
+                            <param id="0" name="Angle">Player.Angle</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3572636988329655" type="KillZone">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241657788836805">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="3551478595757688" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="7709027998351122" type="KillZone">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7340096755892732" type="Victim" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
