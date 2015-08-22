@@ -81,99 +81,161 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="7776942771221947">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="3977203385390071" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1943551476121584" type="Victim">
-                    <param id="0" name="Obstacle">Wall</param>
-                </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6239740820892646" type="Victim">
-                    <param id="0" name="Obstacle">PathfindingHelper</param>
-                </action>
-                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="1353412234814611" type="Victim" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="4448681418699205" title="Init">
+            <sub-events>
+                <event-block sid="7776942771221947">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3977203385390071" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1943551476121584" type="Victim">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6239740820892646" type="Victim">
+                            <param id="0" name="Obstacle">PathfindingHelper</param>
+                        </action>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="1353412234814611" type="Victim" />
+                    </actions>
+                </event-block>
+                <event-block sid="7851989741934904">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7324181604057136" type="Victim" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6168440789737123" type="Victim">
+                            <param id="0" name="Object">VictimSprite</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="3934118852623838" type="VictimSprite">
+                            <param id="0" name="Object">Victim</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="348096723123578" type="Victim">
+                            <param id="0" name="Instance variable">spriteUID</param>
+                            <param id="1" name="Value">VictimSprite.UID</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8479257600286563" type="VictimSprite">
+                            <param id="0" name="Pin to">Victim</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8540771536581579" type="System">
+                            <param id="0" name="Object to create">Alert1Icon</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y - 40</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="582694407470028" type="Victim">
+                            <param id="0" name="Instance variable">alert1IconUID</param>
+                            <param id="1" name="Value">Alert1Icon.UID</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6377766376399306" type="System">
+                            <param id="0" name="Object to create">Alert2Icon</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y - 40</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="60336017609281" type="Victim">
+                            <param id="0" name="Instance variable">alert2IconUID</param>
+                            <param id="1" name="Value">Alert2Icon.UID</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="138155076118183" type="System">
+                            <param id="0" name="Object to create">WorkIcon</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y - 40</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3781807895050248" type="Victim">
+                            <param id="0" name="Instance variable">workIconUID</param>
+                            <param id="1" name="Value">WorkIcon.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8796122288877384" title="Death">
+            <sub-events>
+                <event-block sid="3068577299828538">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="4318455923834191" type="Victim" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="8767546409484025" type="Victim">
+                            <param id="0" name="Instance variable">killed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7316466015225705" type="System">
+                            <param id="0" name="Object to create">Corpse</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2040035602354186">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="3806553298022402" type="Victim" />
+                        <condition id="-14" name="Pick by unique ID" sid="2883785164227075" type="VictimSprite">
+                            <param id="0" name="Unique ID">Victim.spriteUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1567343530618037" type="VictimSprite" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8833052738528893" title="Pathfinding">
+            <sub-events>
+                <event-block sid="3500250935587053">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="9610374038259627" type="Victim" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="7365898881168509" type="Victim" />
+                        <action id="-13" name="Set boolean" sid="8553310353212794" type="Victim">
+                            <param id="0" name="Instance variable">followingPath</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3958917378549229">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="945988385338534" type="Victim" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9954861123214082" type="Victim">
+                            <param id="0" name="Instance variable">followingPath</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1835937039256299">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="3855870102805297" type="Victim" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9200371423293857" type="Victim">
+                            <param id="0" name="Instance variable">followingPath</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="3280758537546376">
             <conditions>
                 <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6159781742288392" type="Victim">
                     <param id="0" name="Object">Player</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7415917108019795" type="Victim">
-                    <param id="0" name="Instance variable">alert</param>
                 </condition>
                 <condition id="-8" name="Is boolean instance variable set" sid="2479013293125566" type="Player">
                     <param id="0" name="Instance variable">psycho</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="7178272272410397" type="Victim">
-                    <param id="0" name="Instance variable">alert</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-10" name="Set value" sid="7178272272410397" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Value">2</param>
                 </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="2564730897850558" type="Victim">
-                    <param id="0" name="X">Exit.X</param>
-                    <param id="1" name="Y">Exit.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3068577299828538">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="4318455923834191" type="Victim" />
-                <condition id="-8" name="Is boolean instance variable set" sid="8767546409484025" type="Victim">
-                    <param id="0" name="Instance variable">killed</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="7146580794636047" type="Victim">
-                    <param id="0" name="Object">Corpse</param>
-                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3500250935587053">
-            <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="9610374038259627" type="Victim" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="7365898881168509" type="Victim" />
-            </actions>
-        </event-block>
-        <event-block sid="7851989741934904">
-            <conditions>
-                <condition id="-18" name="On created" sid="7324181604057136" type="Victim" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="6168440789737123" type="Victim">
-                    <param id="0" name="Object">VictimSprite</param>
-                    <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="3934118852623838" type="VictimSprite">
-                    <param id="0" name="Object">Victim</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="348096723123578" type="Victim">
-                    <param id="0" name="Instance variable">spriteUID</param>
-                    <param id="1" name="Value">VictimSprite.UID</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="8479257600286563" type="VictimSprite">
-                    <param id="0" name="Pin to">Victim</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2040035602354186">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="3806553298022402" type="Victim" />
-                <condition id="-14" name="Pick by unique ID" sid="2883785164227075" type="VictimSprite">
-                    <param id="0" name="Unique ID">Victim.spriteUID</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="1567343530618037" type="VictimSprite" />
             </actions>
         </event-block>
         <event-block sid="418497820116567">
@@ -201,6 +263,381 @@
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="2949412615692856">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1545449968601309" type="Victim">
+                    <param id="0" name="Object">Corpse</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7036928465783605" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6992196360147937" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="9027712448088372" type="Victim">
+                    <param id="0" name="X">Corpse.X + random(-20, 20)</param>
+                    <param id="1" name="Y">Corpse.Y + random(-20, 20)</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8340467953617143" type="Victim">
+                    <param id="0" name="Instance variable">followingPath</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9700229048908245">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4488433699669068" type="Victim">
+                    <param id="0" name="Object">Corpse</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8203020296318132" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8921829589187419" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1821176837393581">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5121182328721094" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3572224307286776" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="224874003543696" type="Victim">
+                    <param id="0" name="X">Exit.X</param>
+                    <param id="1" name="Y">Exit.Y</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5379520322443141" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="3211716416559156" type="Victim">
+                    <param id="0" name="Instance variable">followingPath</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Show/Hide Alert icons</comment>
+        <event-block sid="5950650932319819">
+            <conditions>
+                <condition id="-11" name="For Each" sid="703984746469419" type="System">
+                    <param id="0" name="Object">Victim</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="272446644900024" type="Alert1Icon">
+                    <param id="0" name="Unique ID">Victim.alert1IconUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2235082622725609" type="Alert2Icon">
+                    <param id="0" name="Unique ID">Victim.alert2IconUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="8600192099556745" type="Alert1Icon">
+                    <param id="0" name="X">Victim.X</param>
+                    <param id="1" name="Y">Victim.Y - 40</param>
+                </action>
+                <action id="-3" name="Set position" sid="5615472456809302" type="Alert2Icon">
+                    <param id="0" name="X">Victim.X</param>
+                    <param id="1" name="Y">Victim.Y - 40</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5482948689987793">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6946752693124748" type="Alert1Icon">
+                            <param id="0" name="Unique ID">Victim.alert1IconUID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1123090713235728" type="Alert2Icon">
+                            <param id="0" name="Unique ID">Victim.alert2IconUID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5261069381354266" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8432317053364433" type="Alert1Icon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5794444541258928" type="Alert2Icon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533960364423387">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="3434958624568689" type="Alert1Icon">
+                            <param id="0" name="Unique ID">Victim.alert1IconUID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="6181590130329428" type="Alert2Icon">
+                            <param id="0" name="Unique ID">Victim.alert2IconUID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="961422005887731" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9234732761671813" type="Alert1Icon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3087387796673416" type="Alert2Icon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1152142063095922">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4219708329055832" type="Alert1Icon">
+                            <param id="0" name="Unique ID">Victim.alert1IconUID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2939311699257485" type="Alert2Icon">
+                            <param id="0" name="Unique ID">Victim.alert2IconUID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1430555492436809" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7479388518374307" type="Alert1Icon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1799721978404887" type="Alert2Icon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Wait</comment>
+        <event-block sid="5499448768656953">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7068883864929069" type="System" />
+                <condition id="-8" name="Is boolean instance variable set" sid="4432006471053494" type="Victim">
+                    <param id="0" name="Instance variable">waiting</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="3421377538911372" type="Victim">
+                    <param id="0" name="Instance variable">waitTime</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="9197728926676671" title="Ideas">
+            <sub-events>
+                <comment>One random Victim goes to a random PointOfInterest at random time intervals</comment>
+                <event-block sid="2268596908977892">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="9333682708561599" type="System">
+                            <param id="0" name="Interval (seconds)">random(4.0, 20.0)</param>
+                        </condition>
+                        <condition id="-16" name="Pick random instance" sid="5919985956069642" type="System">
+                            <param id="0" name="Object">Victim</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1533268752860884">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="73962265878648" type="Victim">
+                                    <param id="0" name="Instance variable">occupied</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9452189204095717" type="Victim">
+                                    <param id="0" name="Instance variable">alertLevel</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="4267777097024726" type="System">
+                                    <param id="0" name="Object">PointOfInterest</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="22986599838693" type="Victim">
+                                    <param id="0" name="Instance variable">occupied</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="2410121203197316" type="Victim">
+                                    <param id="0" name="X">PointOfInterest.X + random(-20, 20)</param>
+                                    <param id="1" name="Y">PointOfInterest.Y + random(-20, 20)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3067698375633421" type="Victim">
+                                    <param id="0" name="Instance variable">followingPath</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>On arriving at point of interest</comment>
+                <event-block sid="7613589157225759">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="1401578233376132" type="Victim" />
+                        <condition id="-7" name="Compare instance variable" sid="2872962592926527" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="867247260569021" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2198911715921156" type="Victim">
+                            <param id="0" name="Instance variable">waitTime</param>
+                            <param id="1" name="Value">random(10, 20)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8469348926837716" type="Victim">
+                            <param id="0" name="Instance variable">waiting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>On wait end</comment>
+                <event-block sid="7925938185603081">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4207868135123067" type="Victim">
+                            <param id="0" name="Instance variable">waiting</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7552599304405745" type="Victim">
+                            <param id="0" name="Instance variable">waitTime</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6413993796517484" type="Victim">
+                            <param id="0" name="Instance variable">waiting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6582628061835868" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>On wandering arrive</comment>
+                <event-block sid="345271159724215">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="216090519312004" type="Victim" />
+                        <condition id="-7" name="Compare instance variable" sid="4041089413412459" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5910275332587895" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7064164713622756" type="Victim">
+                            <param id="0" name="Instance variable">waitTime</param>
+                            <param id="1" name="Value">random(2, 5)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2623098416581553" type="Victim">
+                            <param id="0" name="Instance variable">waiting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Init wandering</comment>
+                <event-block sid="4820190542041148">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5641209091153091" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8081925807189376" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3619398048376121" type="Victim">
+                            <param id="0" name="Instance variable">followingPath</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5156318473118794" type="Victim">
+                            <param id="0" name="Instance variable">waiting</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9678756803424832" type="Victim">
+                            <param id="0" name="X">random(LivingRoom.X, LivingRoom.X + LivingRoom.Width)</param>
+                            <param id="1" name="Y">random(LivingRoom.Y, LivingRoom.Y + LivingRoom.Height)</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3190755426819326" type="Victim">
+                            <param id="0" name="Instance variable">followingPath</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="3809637957848394">
+            <conditions>
+                <condition id="-11" name="For Each" sid="3751668126293763" type="System">
+                    <param id="0" name="Object">Victim</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2089749701286121" type="WorkIcon">
+                    <param id="0" name="Unique ID">Victim.workIconUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2211666546153376" type="WorkIcon">
+                    <param id="0" name="X">Victim.X</param>
+                    <param id="1" name="Y">Victim.Y - 40</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="146035605510122">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4933203136157524" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="493775146708297" type="WorkIcon">
+                            <param id="0" name="Unique ID">Victim.workIconUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4863479438684373" type="WorkIcon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6889737993468787">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9350880317950344" type="Victim">
+                            <param id="0" name="Instance variable">occupied</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1662850761307741" type="WorkIcon">
+                            <param id="0" name="Unique ID">Victim.workIconUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3301390887082673" type="WorkIcon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
