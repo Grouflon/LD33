@@ -955,7 +955,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="3156724839980496" speed="10">
+                    <animation framecount="5" loop="1" name="stacy_idle" pingpong="0" repeatcount="1" repeatto="0" sid="3156724839980496" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
                             <image-point name="Icon" x="0.5" y="-0.0142857" />
                         </frame>
@@ -972,7 +972,44 @@
                             <image-point name="Icon" x="0.5" y="-0.0142857" />
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="3496017852754327" speed="10">
+                    <animation framecount="4" loop="1" name="stacy_walk" pingpong="0" repeatcount="1" repeatto="0" sid="3496017852754327" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                    </animation>
+                    <animation framecount="7" loop="1" name="randy_idle" pingpong="0" repeatcount="1" repeatto="0" sid="9814608926848525" speed="8">
+                        <frame duration="5" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="randy_walk" pingpong="0" repeatcount="1" repeatto="0" sid="7112931275324735" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
                             <image-point name="Icon" x="0.5" y="-0.0142857" />
                         </frame>
@@ -991,8 +1028,15 @@
             <object-type name="Corpse" sid="3430327176225771">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="10">
+                    <animation framecount="6" loop="0" name="stacy" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="randy" pingpong="0" repeatcount="1" repeatto="0" sid="6910619967222274" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
