@@ -336,15 +336,29 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-42" name="Signal" sid="2813631425791746" type="System">
-                    <param id="0" name="Tag">&quot;message3&quot;</param>
-                </action>
                 <action id="-16" name="Wait" sid="5312500652133512" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="6725140949677776" type="Message">
                     <param id="0" name="Instance variable">fade</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7264936669676533">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6433360140336537" type="Player">
+                    <param id="0" name="Object">trigger3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1342988558454612" type="System">
+                    <param id="0" name="Variable">tutorialStep</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="2813631425791746" type="System">
+                    <param id="0" name="Tag">&quot;message3&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -373,11 +387,6 @@
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8307677855727276" type="Player">
                     <param id="0" name="Object">ChangeRoom</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="1055467292532157" type="System">
-                    <param id="0" name="Variable">tutorialStep</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">3</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="4892119403437967" type="Message">
                     <param id="0" name="Unique ID">138</param>

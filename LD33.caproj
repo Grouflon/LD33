@@ -376,6 +376,62 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PizzaFull" sid="7210357942781751">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4224840832386979" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\pizza_1.png">
+                            <collision-poly>
+                                <point x="0.111111" y="0.166667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.888889" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.888889" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.111111" y="0.833333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PizzaSliced1" sid="6279551997600225">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="389524250250111" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\pizza_2.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.5" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.875" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.833333" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PizzaSlice1" sid="2067335909121088">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6391869639365865" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\pizza_3.png">
+                            <collision-poly>
+                                <point x="0.2" y="0.25" />
+                                <point x="0.8" y="0.25" />
+                                <point x="1" y="0.5" />
+                                <point x="0.8" y="0.75" />
+                                <point x="0.5" y="1" />
+                                <point x="0.2" y="0.75" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Actors">
             <object-type name="Player" sid="4799823387083699">
@@ -1075,6 +1131,14 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4837013155716398" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trigger3" sid="8132939734114551">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8488520728734029" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
