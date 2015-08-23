@@ -87,6 +87,19 @@
                             <param id="0" name="Instance variable">workIconUID</param>
                             <param id="1" name="Value">WorkIcon.UID</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="3855720039824007" type="VictimSprite">
+                            <param id="0" name="Object">EyeIcon</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="Image point">&quot;Icon&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8703141318679347" type="EyeIcon">
+                            <param id="0" name="Pin to">VictimSprite</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="273955575672927" type="Victim">
+                            <param id="0" name="Instance variable">eyeIconUID</param>
+                            <param id="1" name="Value">EyeIcon.UID</param>
+                        </action>
                         <action id="-3" name="Create object" sid="2306589157582586" type="System">
                             <param id="0" name="Object to create">LineOfSight</param>
                             <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
@@ -156,11 +169,15 @@
                         <condition id="-14" name="Pick by unique ID" sid="9758125844784453" type="Alert2Icon">
                             <param id="0" name="Unique ID">Victim.alert2IconUID</param>
                         </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2366117697885786" type="EyeIcon">
+                            <param id="0" name="Unique ID">Victim.eyeIconUID</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="1567343530618037" type="VictimSprite" />
                         <action id="-9" name="Destroy" sid="9663390679953721" type="Alert1Icon" />
                         <action id="-9" name="Destroy" sid="9903515860170716" type="Alert2Icon" />
+                        <action id="-9" name="Destroy" sid="7673690988900322" type="EyeIcon" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -615,6 +632,9 @@
                         <condition id="-14" name="Pick by unique ID" sid="3912403524275415" type="WorkIcon">
                             <param id="0" name="Unique ID">Victim.workIconUID</param>
                         </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9086314593947627" type="EyeIcon">
+                            <param id="0" name="Unique ID">Victim.eyeIconUID</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="8692040563198787" type="WorkIcon">
@@ -624,6 +644,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="5214617792478906" type="Alert2Icon">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5000030366666148" type="EyeIcon">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -670,6 +693,26 @@
                             </conditions>
                             <actions>
                                 <action id="-15" name="Set visible" sid="8967739501328787" type="Alert2Icon">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8399626405877784">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2567435465111188" type="EyeIcon">
+                                    <param id="0" name="Unique ID">Victim.eyeIconUID</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="208582585310949" type="Victim">
+                                    <param id="0" name="Instance variable">seePlayer</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7723315857623705" type="Victim">
+                                    <param id="0" name="Instance variable">alertLevel</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="2119022353668694" type="EyeIcon">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>

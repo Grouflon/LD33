@@ -3,61 +3,57 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game events</name>
     <events>
+        <variable constant="0" name="canRestart" sid="805708515640847" static="0" type="number">0</variable>
         <variable constant="0" name="canExit" sid="2439739100538676" static="0" type="number">0</variable>
-        <variable constant="0" name="restartCountdown" sid="3820832241248551" static="0" type="number">2</variable>
-        <variable constant="0" name="gameOver" sid="180256166962051" static="0" type="number">0</variable>
         <event-block sid="6350968286176318">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1836909470619293" type="Victim">
                     <param id="0" name="Object">Exit</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="7452363936619631" type="System">
-                    <param id="0" name="Variable">gameOver</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="9103784943913781" type="System">
-                    <param id="0" name="Variable">gameOver</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set text" sid="5119919441978913" type="GameOver">
-                    <param id="0" name="Text">&quot;GAME OVER&quot;</param>
-                </action>
                 <action id="-13" name="Set boolean" sid="7581532977850976" type="Player">
                     <param id="0" name="Instance variable">enabled</param>
                     <param id="1" name="Value">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="2585332357662181">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="9920342929019152" type="System" />
-                <condition id="-14" name="Compare variable" sid="9766274111107829" type="System">
-                    <param id="0" name="Variable">gameOver</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="4465175444064568" type="System">
-                    <param id="0" name="Variable">restartCountdown</param>
-                    <param id="1" name="Value">dt</param>
+                <action id="-13" name="Set boolean" sid="4971838571228312" type="BlackOverlay">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7372121224916874" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-42" name="Signal" sid="7248276886437143" type="System">
+                    <param id="0" name="Tag">&quot;gameOver&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2423630156704574">
+        <event-block sid="3990895034612062">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="4500425089540792" type="System">
-                    <param id="0" name="Variable">restartCountdown</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="6168663954934572" type="System" />
             </conditions>
             <actions>
-                <action id="-21" name="Reset global variables" sid="8973933728180419" type="System" />
-                <action id="-26" name="Restart layout" sid="4738640153449836" type="System" />
+                <action id="-41" name="Wait for signal" sid="7621538845625001" type="System">
+                    <param id="0" name="Tag">&quot;gameOver&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9377803574941691" type="GameOver">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9347737282181209" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9973215936428327" type="GameOverSubtitle">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="9738332971954838" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-9" name="Set value" sid="4130680650997869" type="System">
+                    <param id="0" name="Variable">canRestart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6682507214234433">
@@ -280,6 +276,70 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2746200643265231">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4622321189517977" type="GameOver">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="519802449142385" type="GameOver">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="5419702958625839" type="GameOver">
+                            <param id="0" name="Opacity">GameOver.Opacity - (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7985246611690434">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7803212506389236" type="GameOver">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="1297920325928853" type="GameOver">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="7377715929771157" type="GameOver">
+                            <param id="0" name="Opacity">GameOver.Opacity + (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1717307286269044">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8245218211410305" type="GameOverSubtitle">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="8724676266102494" type="GameOverSubtitle">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="7519351189480426" type="GameOverSubtitle">
+                            <param id="0" name="Opacity">GameOverSubtitle.Opacity - (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5195893242817082">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5492425809650606" type="GameOverSubtitle">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="5015569553759012" type="GameOverSubtitle">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="4041462156861576" type="GameOverSubtitle">
+                            <param id="0" name="Opacity">GameOverSubtitle.Opacity + (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="2257929363082123">
@@ -307,6 +367,105 @@
                 </action>
                 <action id="-42" name="Signal" sid="9839968337214" type="System">
                     <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2546406683636792">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4385280956353915" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8445265819460079" type="System">
+                    <param id="0" name="Variable">canRestart</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="6541733414652991" type="System" />
+                <action id="-26" name="Restart layout" sid="5155648734010985" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="3023308478308556">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8764137698899729" type="System" />
+                <condition id="-14" name="Compare variable" sid="2754958963114943" type="System">
+                    <param id="0" name="Variable">canRestart</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5203441852027133">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9898469628929494" type="GameOverRestart">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="549345239713811" type="GameOverRestart">
+                            <param id="0" name="Opacity">GameOverRestart.Opacity - (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6880221457114113">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="943186888314589" type="GameOverRestart">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="7419891122354764" type="GameOverRestart">
+                            <param id="0" name="Opacity">GameOverRestart.Opacity + (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3656252393486913">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="3570986468043773" type="GameOverRestart">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3023003371560137" type="GameOverRestart">
+                            <param id="0" name="Instance variable">fade</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4906505727839501">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="391792495373236" type="GameOverRestart">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Opacity">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="1758908215911779" type="GameOverRestart">
+                            <param id="0" name="Instance variable">fade</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4488164950292035">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7873314888719063" type="System">
+                    <param id="0" name="Variable">canExit</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="9095019633639401" type="ExitArrow">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="4" name="Set animation" sid="7376793786666254" type="ExitArrow">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
+                    <param id="1" name="From">0</param>
                 </action>
             </actions>
         </event-block>
