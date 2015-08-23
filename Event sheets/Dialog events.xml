@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dialog events</name>
+    <events>
+        <variable constant="0" name="roomIndex" sid="6415235765815384" static="0" type="number">0</variable>
+        <variable constant="0" name="talkingVictim" sid="4353882030329012" static="0" type="number">0</variable>
+        <event-block sid="7414776600067365">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2449992886296849" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1394681314307129" type="DialogBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1263108794739964" type="DialogText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="444979365689981" type="DialogText">
+                    <param id="0" name="Pin to">DialogBox</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="1" name="Set size" sid="2236864417373335" type="RoomArray">
+                    <param id="0" name="Width">0</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4701561466748708">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2164707662586125" type="System">
+                            <param id="0" name="Object">Room</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="8214827955684753" type="RoomArray">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">Room.name</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9044489591315714">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="6744765566929029" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4744994852380922" type="Victim">
+                    <param id="0" name="Unique ID">talkingVictim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9483567580660848" type="DialogBox">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9260109827665012" type="DialogText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2566364727586143" type="DialogBox">
+                    <param id="0" name="Object">PlayerSprite</param>
+                    <param id="1" name="Image point (optional)">&quot;Icon&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="7057431741124459" type="Victim">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="5873866322701504" type="Victim">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8814704137233905">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7800413171890196" type="Keyboard">
+                            <param id="0" name="Key">27 (Esc)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5141959562138704" type="Victim">
+                            <param id="0" name="Unique ID">talkingVictim</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="3279548685480651" type="System">
+                            <param id="0" name="Tag">&quot;DialogEnded&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5099601321593881" type="Victim">
+                            <param id="0" name="Instance variable">enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2948542533608741" type="System">
+                            <param id="0" name="Variable">talkingVictim</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3731135708293337">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="5279815800297169" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2608116651077533" type="Victim">
+                            <param id="0" name="Unique ID">talkingVictim</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3211286655650077" type="Room">
+                            <param id="0" name="Instance variable">name</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">RoomArray.At(roomIndex)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="9982841652458098" type="System">
+                            <param id="0" name="Tag">&quot;DialogEnded&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6234831512097269" type="Victim">
+                            <param id="0" name="Instance variable">enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6899441550007352" type="System">
+                            <param id="0" name="Variable">talkingVictim</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8208380180229523" type="Victim">
+                            <param id="0" name="Instance variable">tempRoom</param>
+                            <param id="1" name="Value">Room.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4352462474569042">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9435004354418393" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3502057300946453" type="DialogBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8725231586336732" type="DialogText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8908131936519455">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4994582479462206" type="System" />
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="315428526556828" type="System">
+                    <param id="0" name="Tag">&quot;DialogStarted&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1804244713109274" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4689578944675544" type="Player">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="322088554956116" type="System">
+                    <param id="0" name="Variable">roomIndex</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7677358708757589">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4475929379879608" type="System">
+                    <param id="0" name="Variable">talkingVictim</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8642686101809465" type="Victim">
+                    <param id="0" name="Unique ID">talkingVictim</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="8422315763179845">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7568361436799797" type="System" />
+                <condition id="-9" name="Is visible" sid="1574217145933825" type="DialogText" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7620070746539368" type="DialogText">
+                    <param id="0" name="Text">&quot;GO TO&quot; &amp; newline &amp; &quot;&lt;&quot; &amp; uppercase(RoomArray.At(roomIndex)) &amp; &quot;&gt;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1244314999489763">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7641519205895173" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4777923803546157" type="DialogText" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3414226224959321" type="System">
+                    <param id="0" name="Variable">roomIndex</param>
+                    <param id="1" name="Value">(roomIndex - 1 + RoomArray.Width) % RoomArray.Width</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="640965074617472">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8236864498203165" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="5239030667555231" type="DialogText" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1110802417017267" type="System">
+                    <param id="0" name="Variable">roomIndex</param>
+                    <param id="1" name="Value">(roomIndex + 1 + RoomArray.Width) % RoomArray.Width</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
