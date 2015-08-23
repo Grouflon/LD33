@@ -10,9 +10,12 @@
     <unique-id>3bb2dyqx0ja01</unique-id>
     <saved-with-version>19500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
@@ -105,173 +108,34 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="ChangeRoom" sid="1249891485566644">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4667832438211899" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Room" sid="7426566855259773">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="name" sid="760347208864836" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8550286012576757" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Actors">
-            <object-folder name="Icons">
-                <object-type name="Alert1Icon" sid="2714994897665693">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="9482836193950705">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5212331210011401" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Alert2Icon" sid="8308413137585366">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="8637084281972495">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8964229484609235" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="WorkIcon" sid="3571236367156397">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="91355694158703">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3161934981800192" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon-16.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Noises">
-                <object-type name="comeNoise" sid="3237996775872233">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="range" sid="1834243666867492" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315535552126352" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="fleeNoise" sid="2912428625453961">
-                    <plugin id="Sprite" />
-                    <instance-variables>
-                        <instance-variable name="range" sid="7289050058308577" type="number" />
-                    </instance-variables>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2929615227959935" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Helpers">
-                <object-type name="KillZone" sid="5629227411714271">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="7365806972530049">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <container>
-                        <type>Player</type>
-                        <type>KillZone</type>
-                    </container>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4949467458796051" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="LineOfSight" sid="4933286430815913">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="LineOfSight" sid="6893471905433712">
-                            <behavior id="LOS" />
-                        </behavior-type>
-                        <behavior-type name="Pin" sid="7027716407960846">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5381761404003511" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
-            <object-folder name="Sprites">
-                <object-type name="PlayerSprite" sid="9203566949472337">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="9977932967067907">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="6" loop="1" name="normal_idle" pingpong="0" repeatcount="1" repeatto="0" sid="7178066129631104" speed="10">
-                            <frame duration="25" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                        </animation>
-                        <animation framecount="6" loop="1" name="normal_walk" pingpong="0" repeatcount="1" repeatto="0" sid="167057134454185" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.90411" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="VictimSprite" sid="779152124677808">
-                    <plugin id="Sprite" />
-                    <behaviors>
-                        <behavior-type name="Pin" sid="2267374082954887">
-                            <behavior id="Pin" />
-                        </behavior-type>
-                    </behaviors>
-                    <animation-folder>
-                        <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="3156724839980496" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                        </animation>
-                        <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="3496017852754327" speed="10">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.871429" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Corpse" sid="3430327176225771">
-                    <plugin id="Sprite" />
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-            </object-folder>
             <object-type name="Player" sid="4799823387083699">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="enabled" sid="8003891245249153" type="boolean" />
                     <instance-variable name="psycho" sid="8651621399344927" type="boolean" />
                     <instance-variable name="seenCount" sid="297233522757014" type="number" />
+                    <instance-variable name="talking" sid="334720252787933" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="3121801718664567">
@@ -296,21 +160,21 @@
             <object-type name="Victim" sid="9950419379572761">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="LOShelper1UID" sid="4356332267924742" type="number" />
-                    <instance-variable name="LOShelper2UID" sid="5194777165668062" type="number" />
                     <instance-variable name="LOSUID" sid="5791308874533604" type="number" />
                     <instance-variable name="alert1IconUID" sid="235195715385565" type="number" />
                     <instance-variable name="alert2IconUID" sid="7234917616671239" type="number" />
-                    <instance-variable name="spriteUID" sid="9451953618335409" type="number" />
                     <instance-variable name="workIconUID" sid="5102019006205029" type="number" />
+                    <instance-variable name="spriteUID" sid="9451953618335409" type="number" />
+                    <instance-variable name="enabled" sid="207660057926906" type="boolean" />
                     <instance-variable name="killed" sid="6199929463142658" type="boolean" />
                     <instance-variable name="seePlayer" sid="1139361938341741" type="boolean" />
                     <instance-variable name="fleeing" sid="6233373642446812" type="boolean" />
-                    <instance-variable name="occupied" sid="5241982412470238" type="boolean" />
                     <instance-variable name="followingPath" sid="7038256937460721" type="boolean" />
                     <instance-variable name="waiting" sid="8710136049524979" type="boolean" />
                     <instance-variable name="alertLevel" sid="7808449251455936" type="number" />
                     <instance-variable name="waitTime" sid="9496729237458902" type="number" />
+                    <instance-variable name="defaultRoom" sid="9607091326395451" type="number" />
+                    <instance-variable name="tempRoom" sid="2484029768096959" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="991920790542147">
@@ -339,6 +203,277 @@
             <object-type name="GameOver" sid="8030903946665176">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="DialogBox" sid="543339315628507">
+                <plugin id="NinePatch" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="9103185034851694">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="DialogText" sid="3993453996911218">
+                <plugin id="Spritefont2" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="5793398636199952">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Helpers">
+            <object-type name="KillZone" sid="5629227411714271">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="7365806972530049">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Player</type>
+                    <type>KillZone</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4949467458796051" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LineOfSight" sid="4933286430815913">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="LineOfSight" sid="6893471905433712">
+                        <behavior id="LOS" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="7027716407960846">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5381761404003511" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Icons">
+            <object-type name="Alert1Icon" sid="2714994897665693">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="9482836193950705">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5212331210011401" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Alert2Icon" sid="8308413137585366">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8637084281972495">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8964229484609235" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WorkIcon" sid="3571236367156397">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="91355694158703">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3161934981800192" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon-16.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PsychoIcon" sid="8010344290175634">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="7905667889347922">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6013895291590748" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NormalIcon" sid="1970636135455191">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2789806458441451">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3249307431915595" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TalkIcon" sid="7225339114049625">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="5642467663464134">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7027243958074065" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="KillIcon" sid="9638288516538639">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8239027804365781">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7913337097631927" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Noises">
+            <object-type name="comeNoise" sid="3237996775872233">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="range" sid="1834243666867492" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315535552126352" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fleeNoise" sid="2912428625453961">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="range" sid="7289050058308577" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2929615227959935" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="PlayerSprite" sid="9203566949472337">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="9977932967067907">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="6" loop="1" name="normal_idle" pingpong="0" repeatcount="1" repeatto="0" sid="7178066129631104" speed="10">
+                        <frame duration="25" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="1" name="normal_walk" pingpong="0" repeatcount="1" repeatto="0" sid="167057134454185" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
+                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="VictimSprite" sid="779152124677808">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2267374082954887">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="5" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="3156724839980496" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="3496017852754327" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.871429">
+                            <image-point name="Icon" x="0.5" y="-0.0142857" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Corpse" sid="3430327176225771">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="4523289223482116">
             <plugin id="Keyboard" />
@@ -346,13 +481,8 @@
         <object-type name="Mouse" sid="9705054463648865">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Sprite" sid="9187318950207704">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6166436179004613" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type global="1" name="RoomArray" sid="9047908820795204">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families />
@@ -365,6 +495,7 @@
         <event-sheet>Player events.xml</event-sheet>
         <event-sheet>Game events.xml</event-sheet>
         <event-sheet>Noise events.xml</event-sheet>
+        <event-sheet>Dialog events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="411" />
