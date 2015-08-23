@@ -10,6 +10,11 @@
                 <condition id="0" name="On collision with another object" sid="1836909470619293" type="Victim">
                     <param id="0" name="Object">Exit</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="7452363936619631" type="System">
+                    <param id="0" name="Variable">gameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="9103784943913781" type="System">
@@ -52,6 +57,33 @@
             <actions>
                 <action id="-21" name="Reset global variables" sid="8973933728180419" type="System" />
                 <action id="-26" name="Restart layout" sid="4738640153449836" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="4521302164422937">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7927771081343169" type="System">
+                    <param id="0" name="Variable">gameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="657421464971119" type="System">
+                    <param id="0" name="First value">Victim.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1921090732194893" type="System">
+                    <param id="0" name="Variable">gameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="9037277371317129" type="GameOver">
+                    <param id="0" name="Text">&quot;YAY!&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9156622276123361" type="Player">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
