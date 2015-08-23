@@ -86,5 +86,104 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6885821361559503">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3378173874247791" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="507751415067354" type="OrderArray">
+                    <param id="0" name="Width">LayoutHeight</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="0" name="Clear" sid="4451743193528096" type="OrderArray" />
+            </actions>
+            <sub-events>
+                <event-block sid="238470955405921">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1502082393797707" type="System">
+                            <param id="0" name="Object">Corpse</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="5341641172776532" type="OrderArray">
+                            <param id="0" name="X">Corpse.Y</param>
+                            <param id="1" name="Value">Corpse.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7037703384315102">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8933758271941609" type="System">
+                            <param id="0" name="Object">PlayerSprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="8198676972203499" type="OrderArray">
+                            <param id="0" name="X">PlayerSprite.Y</param>
+                            <param id="1" name="Value">PlayerSprite.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1189113555668368">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="4587935984988603" type="System">
+                            <param id="0" name="Object">VictimSprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="162841506474248" type="OrderArray">
+                            <param id="0" name="X">VictimSprite.Y</param>
+                            <param id="1" name="Value">VictimSprite.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4552614082078563">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="6537335193990872" type="OrderArray">
+                            <param id="0" name="Axes">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="8889363662623251" type="System">
+                            <param id="0" name="First value">OrderArray.CurValue</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6514068726831875">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="8163701394484496" type="Corpse">
+                                    <param id="0" name="Unique ID">OrderArray.CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="932390911841512" type="Corpse" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4856331858992529">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="1947570517688519" type="PlayerSprite">
+                                    <param id="0" name="Unique ID">OrderArray.CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="6913985885436577" type="PlayerSprite" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="5190110435711655">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6301889089789004" type="VictimSprite">
+                                    <param id="0" name="Unique ID">OrderArray.CurValue</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-24" name="Move to top" sid="9421222128028953" type="VictimSprite" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

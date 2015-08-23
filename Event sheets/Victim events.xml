@@ -112,6 +112,15 @@
                             <param id="2" name="X">Victim.X</param>
                             <param id="3" name="Y">Victim.Y</param>
                         </action>
+                        <action id="-3" name="Create object" sid="1150889115824058" type="System">
+                            <param id="0" name="Object to create">CorpseParticles</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="3105143223384754" type="CorpseParticles">
+                            <param id="0" name="Rate">200</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2040035602354186">
