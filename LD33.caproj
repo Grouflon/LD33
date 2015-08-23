@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -34,8 +35,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>640</height>
+        <width>800</width>
+        <height>608</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -101,14 +102,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="LivingRoom" sid="7730335785112107">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="545949368464175" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="ChangeRoom" sid="1249891485566644">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -128,6 +121,162 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="LairDoor" sid="7461095807282895">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7591620772011603" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.8" original-source="D:\Projects\Games\LD33\Files\super_porte.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.05" />
+                                <point x="0.875" y="0.05" />
+                                <point x="1" y="0.5" />
+                                <point x="0.6875" y="0.875" />
+                                <point x="0.3125" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LairWall" sid="1540257211146555">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="8895825916656455">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="6109918668899905">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Projects\Games\LD33\Files\wall_chambre.png" />
+            </object-type>
+            <object-type name="Shrine" sid="384769921835172">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="3456853962294358">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8392911601911919" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\autel.png">
+                            <collision-poly>
+                                <point x="1" y="0.666667" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CorpseBag" sid="990732198309903">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7877701325463987">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7250474256695668" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\corps.png">
+                            <collision-poly>
+                                <point x="0.9125" y="0.34375" />
+                                <point x="0.9125" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.34375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LairBed" sid="6950151534505735">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8120436903475808" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\lit_mechant.png">
+                            <collision-poly>
+                                <point x="0.15" y="0.25" />
+                                <point x="0.5" y="0.291667" />
+                                <point x="0.825" y="0.291667" />
+                                <point x="0.975" y="0.5" />
+                                <point x="0.95" y="0.916667" />
+                                <point x="0.5" y="0.958333" />
+                                <point x="0.05" y="0.916667" />
+                                <point x="0.025" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mark" sid="1742298333519652">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2273587308741894" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\marque_au_sol.png">
+                            <collision-poly>
+                                <point x="0.333333" y="0.5" />
+                                <point x="0.5" y="0.125" />
+                                <point x="0.833333" y="0.25" />
+                                <point x="0.833333" y="0.75" />
+                                <point x="0.5" y="0.9375" />
+                                <point x="0.333333" y="0.5" />
+                                <point x="0.125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mask" sid="6160502873908665">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8730944603529335" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\masque.png">
+                            <collision-poly>
+                                <point x="0.375" y="0.375" />
+                                <point x="0.5" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DarkGround" sid="6824145170772629">
+                <plugin id="TiledBg" />
+                <texture original-source="D:\Projects\Games\LD33\Files\dark_floor.png" />
+            </object-type>
+            <object-type name="LairDoor2" sid="8782549880486228">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6209892629399291" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\porte_verti.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Candle" sid="9313988476262472">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="1312968504218967">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5761304955958257" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\bougie_1.png">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="1" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Actors">
             <object-type name="Player" sid="4799823387083699">
@@ -141,6 +290,9 @@
                 <behaviors>
                     <behavior-type name="8Direction" sid="3121801718664567">
                         <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="BoundToLayout" sid="8122831237418017">
+                        <behavior id="bound" />
                     </behavior-type>
                 </behaviors>
                 <container>
@@ -220,6 +372,17 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="BlackOverlay" sid="8704350255513757">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="fade" sid="5837481964913181" type="boolean" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="Overlay" sid="9353611020113405">
+                <plugin id="TiledBg" />
                 <texture />
             </object-type>
         </object-folder>
@@ -577,6 +740,40 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="CorpseParticles" sid="4392359448321824">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Tutorial">
+            <object-type name="Message" sid="5729296329095184">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="fade" sid="7762428638547615" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="1827213973999623">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="trigger1" sid="4891931004654228">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6729352467658626" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="trigger2" sid="7780824845997916">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4837013155716398" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="4523289223482116">
             <plugin id="Keyboard" />
@@ -587,27 +784,23 @@
         <object-type global="1" name="RoomArray" sid="9047908820795204">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="CorpseParticles" sid="4392359448321824">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
         <object-type name="ShadowLight" sid="2604888085680734">
             <plugin id="shadowlight" />
         </object-type>
         <object-type global="1" name="OrderArray" sid="8007818254883172">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Overlay" sid="9353611020113405">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>TestLevel.xml</layout>
+        <layout>Tutorial.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Layout 1 events.xml</event-sheet>
+        <event-folder name="Levels">
+            <event-sheet>TestLevel events.xml</event-sheet>
+            <event-sheet>Tutorial events.xml</event-sheet>
+        </event-folder>
         <event-sheet>Victim events.xml</event-sheet>
         <event-sheet>Player events.xml</event-sheet>
         <event-sheet>Game events.xml</event-sheet>

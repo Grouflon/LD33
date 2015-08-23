@@ -127,6 +127,30 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="1780390138085421">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4001817678491819" type="Player">
+                    <param id="0" name="Instance variable">psycho</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="6777723273527132" type="Player">
+                    <param id="0" name="Max Speed">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9879332756507975">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="3810703130154614" type="Player">
+                    <param id="0" name="Instance variable">psycho</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="7105273920145352" type="Player">
+                    <param id="0" name="Max Speed">150</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="1716820840030327" title="Animation">
             <sub-events>
                 <event-block sid="3059946729671367">

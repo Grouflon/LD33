@@ -14,6 +14,12 @@
                         <action behavior="Pathfinding" id="5" name="Add obstacle" sid="6239740820892646" type="Victim">
                             <param id="0" name="Obstacle">PathfindingHelper</param>
                         </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="3759163155319287" type="Victim">
+                            <param id="0" name="Obstacle">LairDoor</param>
+                        </action>
+                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="4491120241217207" type="Victim">
+                            <param id="0" name="Obstacle">LairDoor2</param>
+                        </action>
                         <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="1353412234814611" type="Victim" />
                     </actions>
                 </event-block>
@@ -30,6 +36,9 @@
                         <action id="-4" name="Set position to another object" sid="3934118852623838" type="VictimSprite">
                             <param id="0" name="Object">Victim</param>
                             <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3519872572528026" type="VictimSprite">
+                            <param id="0" name="Angle">0</param>
                         </action>
                         <action id="-10" name="Set value" sid="348096723123578" type="Victim">
                             <param id="0" name="Instance variable">spriteUID</param>
@@ -91,6 +100,18 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="5883656196867907" type="LineOfSight">
                             <param id="0" name="Pin to">Victim</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="5505231721205618" type="LineOfSight">
+                            <param id="0" name="Obstacle">LairDoor</param>
+                        </action>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="4523760916030827" type="LineOfSight">
+                            <param id="0" name="Obstacle">LairDoor2</param>
+                        </action>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="3164159450557396" type="LineOfSight">
+                            <param id="0" name="Obstacle">Wall</param>
+                        </action>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="9673122442851221" type="LineOfSight">
+                            <param id="0" name="Obstacle">Solid</param>
                         </action>
                     </actions>
                 </event-block>
