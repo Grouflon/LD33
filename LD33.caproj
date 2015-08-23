@@ -109,14 +109,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="PointOfInterest" sid="7476963104909445">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8254893838853513" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="ChangeRoom" sid="1249891485566644">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -363,7 +355,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7027243958074065" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_bubulle.png">
+                            <collision-poly>
+                                <point x="0.153846" y="0.142857" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.846154" y="0.142857" />
+                                <point x="1" y="0.5" />
+                                <point x="0.769231" y="0.785714" />
+                                <point x="0.5" y="0.785714" />
+                                <point x="0.307692" y="0.714286" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -376,7 +379,17 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7913337097631927" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_tuer.png">
+                            <collision-poly>
+                                <point x="0.346154" y="0.321429" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.692308" y="0.285714" />
+                                <point x="0.730769" y="0.5" />
+                                <point x="0.653846" y="0.678571" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.346154" y="0.678571" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
