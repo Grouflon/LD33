@@ -214,6 +214,9 @@
                         <action id="7" name="Set mirrored" sid="5742504302887479" type="PlayerSprite">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-8" name="Set angle" sid="5987009337828774" type="Player">
+                            <param id="0" name="Angle">180</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4917476975561126">
@@ -225,6 +228,9 @@
                     <actions>
                         <action id="7" name="Set mirrored" sid="7076312735157389" type="PlayerSprite">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="8113376948431394" type="Player">
+                            <param id="0" name="Angle">0</param>
                         </action>
                     </actions>
                 </event-block>
