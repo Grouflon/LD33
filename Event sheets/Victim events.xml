@@ -112,6 +112,15 @@
                             <param id="2" name="X">Victim.X</param>
                             <param id="3" name="Y">Victim.Y</param>
                         </action>
+                        <action id="-3" name="Create object" sid="1150889115824058" type="System">
+                            <param id="0" name="Object to create">CorpseParticles</param>
+                            <param id="1" name="Layer">LayerIndex(&quot;Entities&quot;)</param>
+                            <param id="2" name="X">Victim.X</param>
+                            <param id="3" name="Y">Victim.Y</param>
+                        </action>
+                        <action id="1" name="Set rate" sid="3105143223384754" type="CorpseParticles">
+                            <param id="0" name="Rate">200</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2040035602354186">
@@ -120,9 +129,17 @@
                         <condition id="-14" name="Pick by unique ID" sid="2883785164227075" type="VictimSprite">
                             <param id="0" name="Unique ID">Victim.spriteUID</param>
                         </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1437405415055745" type="Alert1Icon">
+                            <param id="0" name="Unique ID">Victim.alert1IconUID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9758125844784453" type="Alert2Icon">
+                            <param id="0" name="Unique ID">Victim.alert2IconUID</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="1567343530618037" type="VictimSprite" />
+                        <action id="-9" name="Destroy" sid="9663390679953721" type="Alert1Icon" />
+                        <action id="-9" name="Destroy" sid="9903515860170716" type="Alert2Icon" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -14,16 +14,19 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -72,6 +75,9 @@
                     <behavior-type name="Solid" sid="2731150823821769">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="9366462827808537">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
                 </behaviors>
                 <texture original-source="D:\Projects\Games\LD33\Files\top_wall_sprite.png" />
             </object-type>
@@ -80,6 +86,9 @@
                 <behaviors>
                     <behavior-type name="Solid" sid="3403480701438279">
                         <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="5878499209596598">
+                        <behavior id="shadowcaster" />
                     </behavior-type>
                 </behaviors>
                 <texture original-source="D:\Projects\Games\LD33\Files\wall_sprite.png" />
@@ -97,14 +106,6 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="545949368464175" speed="5">
                         <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="PointOfInterest" sid="7476963104909445">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8254893838853513" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -306,7 +307,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6013895291590748" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_tueur.png">
+                            <collision-poly>
+                                <point x="0.153846" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.923077" y="0.0714286" />
+                                <point x="1" y="0.5" />
+                                <point x="0.769231" y="0.785714" />
+                                <point x="0.5" y="1" />
+                                <point x="0.230769" y="0.785714" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -319,7 +331,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3249307431915595" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_non_tueur.png">
+                            <collision-poly>
+                                <point x="0.153846" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.923077" y="0.0714286" />
+                                <point x="1" y="0.5" />
+                                <point x="0.769231" y="0.785714" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.230769" y="0.785714" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -332,7 +355,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7027243958074065" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_bubulle.png">
+                            <collision-poly>
+                                <point x="0.153846" y="0.142857" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.846154" y="0.142857" />
+                                <point x="1" y="0.5" />
+                                <point x="0.769231" y="0.785714" />
+                                <point x="0.5" y="0.785714" />
+                                <point x="0.307692" y="0.714286" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -345,7 +379,17 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7913337097631927" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\icon_tuer.png">
+                            <collision-poly>
+                                <point x="0.346154" y="0.321429" />
+                                <point x="0.5" y="0.0714286" />
+                                <point x="0.692308" y="0.285714" />
+                                <point x="0.730769" y="0.5" />
+                                <point x="0.653846" y="0.678571" />
+                                <point x="0.5" y="0.928571" />
+                                <point x="0.346154" y="0.678571" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -385,42 +429,96 @@
                 <animation-folder>
                     <animation framecount="6" loop="1" name="normal_idle" pingpong="0" repeatcount="1" repeatto="0" sid="7178066129631104" speed="10">
                         <frame duration="25" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                     </animation>
                     <animation framecount="6" loop="1" name="normal_walk" pingpong="0" repeatcount="1" repeatto="0" sid="167057134454185" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.90411">
-                            <image-point name="Icon" x="0.5" y="0.0410959" />
+                            <image-point name="Icon" x="0.5" y="-0.0273973" />
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="psycho_idle" pingpong="0" repeatcount="1" repeatto="0" sid="4791491255761364" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="1" name="psycho_walk" pingpong="0" repeatcount="1" repeatto="0" sid="7699432480479293" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="0" name="psycho_attack" pingpong="0" repeatcount="1" repeatto="0" sid="5363831667068832" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.897059">
+                            <image-point name="Icon" x="0.5" y="-0.0294118" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -469,7 +567,12 @@
             <object-type name="Corpse" sid="3430327176225771">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="5">
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1290604730584056" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -483,6 +586,20 @@
         </object-type>
         <object-type global="1" name="RoomArray" sid="9047908820795204">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="CorpseParticles" sid="4392359448321824">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="ShadowLight" sid="2604888085680734">
+            <plugin id="shadowlight" />
+        </object-type>
+        <object-type global="1" name="OrderArray" sid="8007818254883172">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Overlay" sid="9353611020113405">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />

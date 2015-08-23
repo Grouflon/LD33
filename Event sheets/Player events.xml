@@ -129,89 +129,133 @@
         </event-block>
         <event-group description="" sid="1716820840030327" title="Animation">
             <sub-events>
-                <event-block sid="9478930320000361">
+                <event-block sid="3059946729671367">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7355549929336376" type="Player">
-                            <param id="0" name="Instance variable">psycho</param>
+                        <condition id="2" inverted="1" name="Is playing" sid="9565545343251847" type="PlayerSprite">
+                            <param id="0" name="Animation">&quot;psycho_attack&quot;</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2911260588463103" type="Player">
-                            <param id="0" name="Animation">&quot;psycho&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6696104469142811">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3758239966425549" type="Player">
-                            <param id="0" name="Instance variable">psycho</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="5120758434645323" type="Player">
-                            <param id="0" name="Animation">&quot;normal&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8566539416045796">
-                    <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="4400069761052984" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2221692155814901" type="PlayerSprite">
-                            <param id="0" name="Animation">&quot;normal_walk&quot;</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1001135392606551">
-                    <conditions>
-                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="8755220597383396" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="4252588431669953" type="PlayerSprite">
-                            <param id="0" name="Animation">&quot;normal_idle&quot;</param>
-                            <param id="1" name="From">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="46082344014569">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="1017303065290945" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4016118362173389" type="Player">
-                            <param id="0" name="Instance variable">enabled</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="5742504302887479" type="PlayerSprite">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5987009337828774" type="Player">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4917476975561126">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="5866415685972562" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="6819160295831793" type="Player">
-                            <param id="0" name="Instance variable">enabled</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="7076312735157389" type="PlayerSprite">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="8113376948431394" type="Player">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9478930320000361">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="7355549929336376" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2911260588463103" type="Player">
+                                    <param id="0" name="Animation">&quot;psycho&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6696104469142811">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3758239966425549" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5120758434645323" type="Player">
+                                    <param id="0" name="Animation">&quot;normal&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8566539416045796">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="4400069761052984" type="Player" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="588673675401375" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2221692155814901" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;normal_walk&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1001135392606551">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="8755220597383396" type="Player" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4486926418450488" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4252588431669953" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;normal_idle&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4449786622945306">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" name="Is moving" sid="8174018370095479" type="Player" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="1339165828315215" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4863978746149871" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;psycho_walk&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9446701385255657">
+                            <conditions>
+                                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="1348223608257064" type="Player" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="5164154990803143" type="Player">
+                                    <param id="0" name="Instance variable">psycho</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8946015959680329" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;psycho_idle&quot;</param>
+                                    <param id="1" name="From">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="46082344014569">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="1017303065290945" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4016118362173389" type="Player">
+                                    <param id="0" name="Instance variable">enabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="5742504302887479" type="PlayerSprite">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5987009337828774" type="Player">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4917476975561126">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="5866415685972562" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6819160295831793" type="Player">
+                                    <param id="0" name="Instance variable">enabled</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="7076312735157389" type="PlayerSprite">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="8113376948431394" type="Player">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -230,23 +274,45 @@
                     <sub-events>
                         <event-block sid="6687428614602621">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="3592125469748329" type="KillZone">
-                                    <param id="0" name="Object">Victim</param>
-                                </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="7763933311513504" type="Player">
                                     <param id="0" name="Instance variable">psycho</param>
                                 </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="9115472278715598" type="Player">
-                                    <param id="0" name="Instance variable">psycho</param>
+                                <condition id="2" inverted="1" name="Is playing" sid="8418578563079197" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;psycho_attack&quot;</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="1725884508521045" type="Player">
+                                    <param id="0" name="Object">ChangeRoom</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="7406283299800335" type="Victim">
-                                    <param id="0" name="Instance variable">killed</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="4" name="Set animation" sid="3734797938626872" type="PlayerSprite">
+                                    <param id="0" name="Animation">&quot;psycho_attack&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="481060019307222" type="Victim" />
+                                <action id="-13" name="Set boolean" sid="6147592641176234" type="Player">
+                                    <param id="0" name="Instance variable">enabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8380832963137941">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="8342750219623792" type="KillZone">
+                                            <param id="0" name="Object">Victim</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7406283299800335" type="Victim">
+                                            <param id="0" name="Instance variable">killed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="481060019307222" type="Victim" />
+                                        <action id="-16" name="Set opacity" sid="9571293349738981" type="Overlay">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="9237846896775594">
                             <conditions>
@@ -259,8 +325,8 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2656910911848496" type="Player">
                                     <param id="0" name="Instance variable">talking</param>
                                 </condition>
-                                <condition id="-16" name="Pick random instance" sid="8690387077285582" type="System">
-                                    <param id="0" name="Object">PointOfInterest</param>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="6073244225980151" type="Player">
+                                    <param id="0" name="Object">ChangeRoom</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -402,6 +468,23 @@
                 <action id="-13" name="Set boolean" sid="2807321903490697" type="Player">
                     <param id="0" name="Instance variable">enabled</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="598018971340213">
+            <conditions>
+                <condition id="4" name="On finished" sid="5229590177007786" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;psycho_attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="179314912481877" type="Player">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="546139031015139" type="PlayerSprite">
+                    <param id="0" name="Animation">&quot;psycho_idle&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
