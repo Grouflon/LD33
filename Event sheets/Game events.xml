@@ -208,5 +208,26 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="2645709211189265">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7517158838017861" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6201690032720523">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="4999840963295308" type="Overlay">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="354910062271991" type="Overlay">
+                            <param id="0" name="Opacity">Overlay.Opacity - (dt * 230)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

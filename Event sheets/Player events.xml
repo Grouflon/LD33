@@ -307,6 +307,9 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="481060019307222" type="Victim" />
+                                        <action id="-16" name="Set opacity" sid="9571293349738981" type="Overlay">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

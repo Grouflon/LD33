@@ -597,6 +597,10 @@
         <object-type global="1" name="OrderArray" sid="8007818254883172">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Overlay" sid="9353611020113405">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
