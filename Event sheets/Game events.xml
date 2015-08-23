@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game events</name>
     <events>
+        <variable constant="0" name="canExit" sid="2439739100538676" static="0" type="number">0</variable>
         <variable constant="0" name="restartCountdown" sid="3820832241248551" static="0" type="number">2</variable>
         <variable constant="0" name="gameOver" sid="180256166962051" static="0" type="number">0</variable>
         <event-block sid="6350968286176318">
@@ -59,30 +60,19 @@
                 <action id="-26" name="Restart layout" sid="4738640153449836" type="System" />
             </actions>
         </event-block>
-        <event-block sid="4521302164422937">
+        <event-block sid="6682507214234433">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="7927771081343169" type="System">
-                    <param id="0" name="Variable">gameOver</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="657421464971119" type="System">
+                <condition id="-1" name="Every tick" sid="3770519778974121" type="System" />
+                <condition id="-8" name="Compare two values" sid="1936774428366596" type="System">
                     <param id="0" name="First value">Victim.Count</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="1921090732194893" type="System">
-                    <param id="0" name="Variable">gameOver</param>
+                <action id="-9" name="Set value" sid="5206647067802203" type="System">
+                    <param id="0" name="Variable">canExit</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set text" sid="9037277371317129" type="GameOver">
-                    <param id="0" name="Text">&quot;YAY!&quot;</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="9156622276123361" type="Player">
-                    <param id="0" name="Instance variable">enabled</param>
-                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -251,6 +241,74 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="8040746762830336">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2580949941088882" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6020019103318085">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2691851703595604" type="BlackOverlay">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="6913855070553906" type="BlackOverlay">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="644520772976449" type="BlackOverlay">
+                            <param id="0" name="Opacity">BlackOverlay.Opacity - (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1460216233088716">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5917716131460961" type="BlackOverlay">
+                            <param id="0" name="Instance variable">fade</param>
+                        </condition>
+                        <condition id="-10" name="Compare opacity" sid="4378309705677887" type="BlackOverlay">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="9488156150821823" type="BlackOverlay">
+                            <param id="0" name="Opacity">BlackOverlay.Opacity + (dt*100)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2257929363082123">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1743764344760274" type="Player">
+                    <param id="0" name="Object">Exit</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="212516184113822" type="System">
+                    <param id="0" name="Variable">canExit</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="8230445982146593" type="Player">
+                    <param id="0" name="Instance variable">enabled</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5647044659393308" type="BlackOverlay">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="667286353793407" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-42" name="Signal" sid="9839968337214" type="System">
+                    <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

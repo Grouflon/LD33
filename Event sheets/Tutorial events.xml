@@ -157,45 +157,63 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5702045159304596">
+        <event-block sid="5395715189470496">
             <conditions>
-                <condition id="-1" name="Every tick" sid="1200620266098357" type="System" />
+                <condition id="-2" name="On start of layout" sid="1357370070919846" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="8980592019323984" type="Message">
+                    <param id="0" name="Unique ID">133</param>
+                </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2518888892385752">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5770756934736476" type="BlackOverlay">
-                            <param id="0" name="Instance variable">fade</param>
-                        </condition>
-                        <condition id="-10" name="Compare opacity" sid="220289877687592" type="BlackOverlay">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Opacity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="1180557781244269" type="BlackOverlay">
-                            <param id="0" name="Opacity">BlackOverlay.Opacity - (dt*100)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3172816272532684">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8412624336826774" type="BlackOverlay">
-                            <param id="0" name="Instance variable">fade</param>
-                        </condition>
-                        <condition id="-10" name="Compare opacity" sid="320172435423505" type="BlackOverlay">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Opacity">100</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="2387894078782762" type="BlackOverlay">
-                            <param id="0" name="Opacity">BlackOverlay.Opacity + (dt*100)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="3409529813191809" type="System">
+                    <param id="0" name="Tag">&quot;message7&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="572952836832282" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1074319098788197" type="System">
+                    <param id="0" name="Variable">tutorialStep</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="-42" name="Signal" sid="3935974983280549" type="System">
+                    <param id="0" name="Tag">&quot;message8&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8227504646011472">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8893652533325935" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="2247322453547245" type="Message">
+                    <param id="0" name="Unique ID">140</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="3818603965045077" type="System">
+                    <param id="0" name="Tag">&quot;message8&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8432394840017835" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3409175441275562">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1393464258519466" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="7234935138715042" type="Message">
+                    <param id="0" name="Unique ID">141</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="6776049979203528" type="System">
+                    <param id="0" name="Tag">&quot;message9&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1046604973765757" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="501313283554044">
             <conditions>
@@ -397,6 +415,115 @@
                 <action id="-42" name="Signal" sid="8887637265560729" type="System">
                     <param id="0" name="Tag">&quot;message6&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="5700187674735475">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="5842729452055672" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1509678847482979" type="Message">
+                    <param id="0" name="Unique ID">104</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="5982616986939377" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-42" name="Signal" sid="8301481525412231" type="System">
+                    <param id="0" name="Tag">&quot;message7&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8043965565451682">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="6149233537893362" type="System">
+                    <param id="0" name="First value">Victim.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6895713333748798" type="System">
+                    <param id="0" name="Variable">tutorialStep</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1233815205090201" type="Message">
+                    <param id="0" name="Unique ID">133</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="5078429994206131" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6430855871040803">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="4048224766831864" type="System">
+                    <param id="0" name="First value">Victim.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2264022183193949" type="System">
+                    <param id="0" name="Variable">tutorialStep</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6579370281214498" type="Message">
+                    <param id="0" name="Unique ID">140</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="2915012370932053" type="System">
+                    <param id="0" name="Tag">&quot;message9&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8184481927873445" type="Message">
+                    <param id="0" name="Instance variable">fade</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3982441442555976">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7353562931139866" type="Victim" />
+                <condition id="-8" name="Compare two values" sid="3339655566058962" type="System">
+                    <param id="0" name="First value">Victim.UID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="9141822042696364" type="System">
+                    <param id="0" name="Tag">&quot;turnOver&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2998506139250934">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="5138600612031633" type="Victim">
+                    <param id="0" name="Unique ID">99</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="4026368839188193" type="System">
+                    <param id="0" name="Tag">&quot;turnOver&quot;</param>
+                </action>
+                <action id="-8" name="Set angle" sid="2084506574251397" type="Victim">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6624192059087068">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9008644458583369" type="System" />
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="6099932084616487" type="System">
+                    <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="5725572076518025" type="System" />
             </actions>
         </event-block>
     </events>
