@@ -104,7 +104,7 @@
                         <condition id="-14" name="Pick by unique ID" sid="2608116651077533" type="Victim">
                             <param id="0" name="Unique ID">talkingVictim</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="3211286655650077" type="Room">
+                        <condition disabled="1" id="-7" name="Compare instance variable" sid="3211286655650077" type="Room">
                             <param id="0" name="Instance variable">name</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">RoomArray.At(roomIndex)</param>
@@ -122,7 +122,7 @@
                             <param id="0" name="Variable">talkingVictim</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="8208380180229523" type="Victim">
+                        <action disabled="1" id="-10" name="Set value" sid="8208380180229523" type="Victim">
                             <param id="0" name="Instance variable">tempRoom</param>
                             <param id="1" name="Value">Room.UID</param>
                         </action>
@@ -186,14 +186,17 @@
                 <condition id="-9" name="Is visible" sid="1574217145933825" type="DialogText" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="7620070746539368" type="DialogText">
+                <action disabled="1" id="0" name="Set text" sid="7620070746539368" type="DialogText">
                     <param id="0" name="Text">&quot;GO TO&quot; &amp; newline &amp; &quot;&lt;&quot; &amp; uppercase(RoomArray.At(roomIndex)) &amp; &quot;&gt;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="34125679790464" type="DialogText">
+                    <param id="0" name="Text">&quot;GET OFF ME&quot; &amp; newline &amp; &quot;YOU FREAK!&quot;</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1244314999489763">
+        <event-block disabled="1" sid="1244314999489763">
             <conditions>
-                <condition id="0" name="On key pressed" sid="7641519205895173" type="Keyboard">
+                <condition disabled="1" id="0" name="On key pressed" sid="7641519205895173" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="4777923803546157" type="DialogText" />
@@ -205,7 +208,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="640965074617472">
+        <event-block disabled="1" sid="640965074617472">
             <conditions>
                 <condition id="0" name="On key pressed" sid="8236864498203165" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>

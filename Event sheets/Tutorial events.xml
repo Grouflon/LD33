@@ -500,6 +500,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8104468173716682">
+            <conditions>
+                <condition id="-11" name="For Each" sid="8612670766521387" type="System">
+                    <param id="0" name="Object">Victim</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4024734289663356" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8650251041837975" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="4717093683076519" type="Victim">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="2998506139250934">
             <conditions>
                 <condition id="-14" name="Pick by unique ID" sid="5138600612031633" type="Victim">
@@ -523,6 +541,7 @@
                 <action id="-41" name="Wait for signal" sid="6099932084616487" type="System">
                     <param id="0" name="Tag">&quot;victory&quot;</param>
                 </action>
+                <action id="-21" name="Reset global variables" sid="5027175456715964" type="System" />
                 <action id="-26" name="Restart layout" sid="5725572076518025" type="System" />
             </actions>
         </event-block>
