@@ -39,7 +39,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Level1</first-layout>
+    <first-layout>Tutorial</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -821,6 +821,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Waypoint" sid="1127646393347991">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2840083419199652" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Icons">
             <object-type name="Alert1Icon" sid="2714994897665693">
@@ -832,7 +840,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5212331210011401" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\interrogation.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.0833333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.0833333" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.75" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.25" y="0.833333" />
+                                <point x="0.375" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1262,16 +1281,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder name="Level1">
-            <object-type name="StacyWaypoint" sid="1127646393347991">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2840083419199652" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
+        <object-folder name="Level1" />
         <object-type name="Keyboard" sid="4523289223482116">
             <plugin id="Keyboard" />
         </object-type>
@@ -1308,6 +1318,7 @@
             <event-sheet>TestLevel events.xml</event-sheet>
             <event-sheet>Tutorial events.xml</event-sheet>
             <event-sheet>Level1 events.xml</event-sheet>
+            <event-sheet>Level2 events.xml</event-sheet>
         </event-folder>
         <event-sheet>Victim events.xml</event-sheet>
         <event-sheet>Player events.xml</event-sheet>

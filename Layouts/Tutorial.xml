@@ -2631,7 +2631,7 @@
                         <y>176</y>
                         <z>0</z>
                         <width>16</width>
-                        <height>16</height>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -3161,8 +3161,8 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>640</width>
-                        <height>640</height>
+                        <width>800</width>
+                        <height>608</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

@@ -5,6 +5,18 @@
     <events>
         <variable constant="0" name="canRestart" sid="805708515640847" static="0" type="number">0</variable>
         <variable constant="0" name="canExit" sid="2439739100538676" static="0" type="number">0</variable>
+        <event-block sid="9671349225144036">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="802739320391207" type="Keyboard">
+                    <param id="0" name="Key">113 (F2)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-42" name="Signal" sid="448947109749579" type="System">
+                    <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="6350968286176318">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1836909470619293" type="Victim">

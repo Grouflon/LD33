@@ -67,7 +67,7 @@
                     <param id="2" name="Value">0</param>
                 </condition>
                 <condition id="-13" name="Pick nth instance" sid="9021228253840714" type="System">
-                    <param id="0" name="Object">StacyWaypoint</param>
+                    <param id="0" name="Object">Waypoint</param>
                     <param id="1" name="Instance">currentStacyWaypoint</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="3434503956798727" type="Victim">
@@ -83,8 +83,8 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action behavior="Pathfinding" id="0" name="Find path" sid="3255831776387252" type="Victim">
-                    <param id="0" name="X">StacyWaypoint.X</param>
-                    <param id="1" name="Y">StacyWaypoint.Y</param>
+                    <param id="0" name="X">Waypoint.X</param>
+                    <param id="1" name="Y">Waypoint.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -119,12 +119,6 @@
                 <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="8618077520835032" type="Victim" />
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="7371097412895212">
-                    <conditions />
-                    <actions />
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="6260982250681959">
             <conditions>
@@ -143,7 +137,7 @@
                             <param id="0" name="Unique ID">242</param>
                         </condition>
                         <condition id="-13" name="Pick nth instance" sid="6849700642086496" type="System">
-                            <param id="0" name="Object">StacyWaypoint</param>
+                            <param id="0" name="Object">Waypoint</param>
                             <param id="1" name="Instance">currentStacyWaypoint</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5043653311698201" type="Victim">
@@ -157,8 +151,8 @@
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="0" name="Find path" sid="431078794955149" type="Victim">
-                            <param id="0" name="X">StacyWaypoint.X</param>
-                            <param id="1" name="Y">StacyWaypoint.Y</param>
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -199,6 +193,20 @@
             <actions>
                 <action behavior="Pathfinding" id="7" name="Set max speed" sid="8705088177306236" type="Victim">
                     <param id="0" name="Speed">140</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5815587801310509">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4629666888036368" type="System" />
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="3959166469990126" type="System">
+                    <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="7901961239208863" type="System" />
+                <action id="-25" name="Go to layout (by name)" sid="9062630236049069" type="System">
+                    <param id="0" name="Layout">&quot;Level2&quot;</param>
                 </action>
             </actions>
         </event-block>

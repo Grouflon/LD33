@@ -1644,7 +1644,7 @@
                         <y>176</y>
                         <z>0</z>
                         <width>16</width>
-                        <height>16</height>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2045,7 +2045,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StacyWaypoint" uid="211">
+                <instance type="Waypoint" uid="211">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2067,7 +2067,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StacyWaypoint" uid="212">
+                <instance type="Waypoint" uid="212">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2089,7 +2089,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StacyWaypoint" uid="213">
+                <instance type="Waypoint" uid="213">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2111,7 +2111,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StacyWaypoint" uid="214">
+                <instance type="Waypoint" uid="214">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2284,8 +2284,8 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>640</width>
-                        <height>640</height>
+                        <width>800</width>
+                        <height>608</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
