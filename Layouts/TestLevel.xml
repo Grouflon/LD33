@@ -1770,8 +1770,8 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>500</range>
-                                <cone-of-view>160</cone-of-view>
+                                <range>1000</range>
+                                <cone-of-view>150</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
                         </behavior-instance>

@@ -1301,6 +1301,7 @@
         <layout>TestLevel.xml</layout>
         <layout>Tutorial.xml</layout>
         <layout>Level1.xml</layout>
+        <layout>Level2.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">

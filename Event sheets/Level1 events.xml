@@ -149,6 +149,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5043653311698201" type="Victim">
                             <param id="0" name="Instance variable">fleeing</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3204984940760339" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="0" name="Find path" sid="431078794955149" type="Victim">

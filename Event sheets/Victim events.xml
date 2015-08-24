@@ -484,30 +484,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9700229048908245">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="8355747613057788" type="LineOfSight">
-                            <param id="0" name="Unique ID">Victim.LOSUID</param>
-                        </condition>
-                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5317992736274577" type="LineOfSight">
-                            <param id="0" name="Object">Corpse</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8203020296318132" type="Victim">
-                            <param id="0" name="Instance variable">alertLevel</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2283964337307774" type="Victim">
-                            <param id="0" name="Instance variable">enabled</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="8921829589187419" type="Victim">
-                            <param id="0" name="Instance variable">alertLevel</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="1821176837393581">
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5121182328721094" type="Victim">
@@ -557,116 +533,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9197728926676671" title="Ideas">
-            <sub-events>
-                <comment>On wait end</comment>
-                <event-block disabled="1" sid="7925938185603081">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4207868135123067" type="Victim">
-                            <param id="0" name="Instance variable">waiting</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7552599304405745" type="Victim">
-                            <param id="0" name="Instance variable">waitTime</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="6413993796517484" type="Victim">
-                            <param id="0" name="Instance variable">waiting</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>On wandering arrive</comment>
-                <event-block disabled="1" sid="345271159724215">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="216090519312004" type="Victim" />
-                        <condition id="-7" name="Compare instance variable" sid="4041089413412459" type="Victim">
-                            <param id="0" name="Instance variable">alertLevel</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="7064164713622756" type="Victim">
-                            <param id="0" name="Instance variable">waitTime</param>
-                            <param id="1" name="Value">random(2, 5)</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="2623098416581553" type="Victim">
-                            <param id="0" name="Instance variable">waiting</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Init wandering</comment>
-                <event-block disabled="1" sid="4820190542041148">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5641209091153091" type="Victim">
-                            <param id="0" name="Instance variable">alertLevel</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3619398048376121" type="Victim">
-                            <param id="0" name="Instance variable">followingPath</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5156318473118794" type="Victim">
-                            <param id="0" name="Instance variable">waiting</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3599649921017432" type="Victim">
-                            <param id="0" name="Instance variable">enabled</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="2231588733617341">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1412995753124283" type="Victim">
-                                    <param id="0" name="Instance variable">tempRoom</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="519892345390088" type="Room">
-                                    <param id="0" name="Unique ID">Victim.tempRoom</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="9678756803424832" type="Victim">
-                                    <param id="0" name="X">random(Room.X + 8, Room.X + Room.Width - 8)</param>
-                                    <param id="1" name="Y">random(Room.Y + 8, Room.Y + Room.Height - 8)</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="3190755426819326" type="Victim">
-                                    <param id="0" name="Instance variable">followingPath</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="398103293093104">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="5433510461197671" type="Victim">
-                                    <param id="0" name="Instance variable">tempRoom</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="9210148466321016" type="Room">
-                                    <param id="0" name="Unique ID">Victim.defaultRoom</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="9820596616434914" type="Victim">
-                                    <param id="0" name="X">random(Room.X + 8, Room.X + Room.Width - 8)</param>
-                                    <param id="1" name="Y">random(Room.Y + 8, Room.Y + Room.Height - 8)</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="8240045492191955" type="Victim">
-                                    <param id="0" name="Instance variable">followingPath</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="4561276845748455" title="VictimIcons">
             <sub-events>
                 <event-block sid="3161056128551592">
@@ -801,6 +667,25 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="2497223008171244">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="913582615898038" type="Victim" />
+                <condition id="-7" name="Compare instance variable" sid="4578915409529929" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="9164873011418567" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-10" name="Set value" sid="883255580629058" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
