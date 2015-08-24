@@ -3,9 +3,204 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level1 events</name>
     <events>
+        <variable constant="0" name="currentStacyWaypoint" sid="285331761265556" static="0" type="number">0</variable>
+        <variable constant="0" name="musicOn" sid="7396738115913763" static="0" type="number">0</variable>
         <include>Noise events</include>
         <include>Game events</include>
         <include>Player events</include>
         <include>Victim events</include>
+        <event-block sid="3999987219324929">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="6451842899070542" type="Victim">
+                    <param id="0" name="Unique ID">243</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4603355606271808" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8314684091411695" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="9158383629867928" type="Victim">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4865883290749826">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="1164300686627833" type="Victim">
+                    <param id="0" name="Unique ID">242</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1667299171537212" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7346892370616575" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1184810010647483" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="7825840153835849" type="Victim">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8518685365402856">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7118329075504422" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6516526231762395" type="Player">
+                    <param id="0" name="Instance variable">psycho</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="8141618750351003" type="KillZone">
+                    <param id="0" name="Object">Amp</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7170459336780272" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-13" name="Pick nth instance" sid="9021228253840714" type="System">
+                    <param id="0" name="Object">StacyWaypoint</param>
+                    <param id="1" name="Instance">currentStacyWaypoint</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="3434503956798727" type="Victim">
+                    <param id="0" name="Unique ID">242</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9008851343816747" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4833846259429003" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="3255831776387252" type="Victim">
+                    <param id="0" name="X">StacyWaypoint.X</param>
+                    <param id="1" name="Y">StacyWaypoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8358711706940481">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1791760561559268" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="4375153465844769" type="System">
+                    <param id="0" name="Object">Sono</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7482142510182154" type="Sono">
+                    <param id="0" name="Animation">&quot;Play&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7588556659412771">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="8897396483370888" type="Victim">
+                    <param id="0" name="Unique ID">242</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8830281574809768" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="8618077520835032" type="Victim" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7371097412895212">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6260982250681959">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="5108772513785572" type="Victim" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6750083652747965" type="System">
+                    <param id="0" name="Variable">currentStacyWaypoint</param>
+                    <param id="1" name="Value">(currentStacyWaypoint+1)%4</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7716809933511452">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9190214207842438" type="Victim">
+                            <param id="0" name="Unique ID">242</param>
+                        </condition>
+                        <condition id="-13" name="Pick nth instance" sid="6849700642086496" type="System">
+                            <param id="0" name="Object">StacyWaypoint</param>
+                            <param id="1" name="Instance">currentStacyWaypoint</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5043653311698201" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3204984940760339" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="431078794955149" type="Victim">
+                            <param id="0" name="X">StacyWaypoint.X</param>
+                            <param id="1" name="Y">StacyWaypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7553783018030118">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="7602930273014945" type="Victim" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="61237582495574" type="Victim" />
+            </actions>
+        </event-block>
+        <event-block sid="5867522727543287">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="2214509765849001" type="Victim">
+                    <param id="0" name="Unique ID">242</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1131148131053624" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="7" name="Set max speed" sid="5183755670735876" type="Victim">
+                    <param id="0" name="Speed">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1194269853563543">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="9610099015488154" type="Victim">
+                    <param id="0" name="Unique ID">242</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6456810991122927" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="7" name="Set max speed" sid="8705088177306236" type="Victim">
+                    <param id="0" name="Speed">140</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
