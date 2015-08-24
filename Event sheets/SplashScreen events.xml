@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SplashScreen events</name>
+    <events>
+        <variable constant="0" name="showText" sid="8335437011202737" static="0" type="number">0</variable>
+        <event-block sid="7252358729083406">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9479031799565271" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="2434340280003293" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="7402093419505774" type="System">
+                    <param id="0" name="Variable">showText</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2967710000783431">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2331831986522978" type="System">
+                    <param id="0" name="Variable">showText</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="4732628706291271" type="System">
+                    <param id="0" name="Object">GameOver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="5369486253227393" type="GameOver">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9655600918335229" type="GameOverRestart">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3925074062119952">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4071617764572348" type="System">
+                    <param id="0" name="Interval (seconds)">0.6</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8357593631879336" type="System">
+                    <param id="0" name="Variable">showText</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="941466427256113" type="GameOverRestart">
+                    <param id="0" name="Instance variable">fade</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4181549555003351">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="189598622111424" type="GameOverRestart">
+                    <param id="0" name="Instance variable">fade</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1062528164132426" type="GameOverRestart">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4757022844749596">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3251950620149867" type="GameOverRestart">
+                    <param id="0" name="Instance variable">fade</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4658403771620122" type="GameOverRestart">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5303245665398521">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5075701972963097" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="2756967223974693" type="System">
+                    <param id="0" name="Object">GameOver</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9222182592246943" type="System">
+                    <param id="0" name="Variable">showText</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5411503606671993" type="GameOver">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7685223767065101" type="GameOverRestart">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="8045873186074784" type="SplashScreen">
+                    <param id="0" name="Animation">&quot;Fade&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1667263871469184" type="System">
+                    <param id="0" name="Seconds">0.75</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="4037089338126583" type="System">
+                    <param id="0" name="Layout">Tutorial</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

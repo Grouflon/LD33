@@ -1305,6 +1305,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SplashScreen" sid="2611166769275158">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="899813135079872" speed="3">
+                    <frame duration="1" hotspotX="0" hotspotY="-0" original-source="D:\Projects\Games\LD33\Files\splashscreen.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="4" loop="0" name="Fade" pingpong="0" repeatcount="1" repeatto="0" sid="4865483164928934" speed="6">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0" />
+                    <frame duration="1" hotspotX="0" hotspotY="-0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="2387919396442914">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5276652705399298" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SplashScreenBg" sid="3487512169699625">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1312,6 +1341,7 @@
         <layout>Tutorial.xml</layout>
         <layout>Level1.xml</layout>
         <layout>Level2.xml</layout>
+        <layout>SplashScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">
@@ -1319,6 +1349,7 @@
             <event-sheet>Tutorial events.xml</event-sheet>
             <event-sheet>Level1 events.xml</event-sheet>
             <event-sheet>Level2 events.xml</event-sheet>
+            <event-sheet>SplashScreen events.xml</event-sheet>
         </event-folder>
         <event-sheet>Victim events.xml</event-sheet>
         <event-sheet>Player events.xml</event-sheet>
