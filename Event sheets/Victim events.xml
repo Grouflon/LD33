@@ -543,7 +543,7 @@
             </sub-events>
         </event-block>
         <comment>Wait</comment>
-        <event-block sid="5499448768656953">
+        <event-block disabled="1" sid="5499448768656953">
             <conditions>
                 <condition id="-1" name="Every tick" sid="7068883864929069" type="System" />
                 <condition id="-8" name="Is boolean instance variable set" sid="4432006471053494" type="Victim">
@@ -560,7 +560,7 @@
         <event-group description="" sid="9197728926676671" title="Ideas">
             <sub-events>
                 <comment>On wait end</comment>
-                <event-block sid="7925938185603081">
+                <event-block disabled="1" sid="7925938185603081">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="4207868135123067" type="Victim">
                             <param id="0" name="Instance variable">waiting</param>
@@ -579,7 +579,7 @@
                     </actions>
                 </event-block>
                 <comment>On wandering arrive</comment>
-                <event-block sid="345271159724215">
+                <event-block disabled="1" sid="345271159724215">
                     <conditions>
                         <condition behavior="Pathfinding" id="5" name="On arrived" sid="216090519312004" type="Victim" />
                         <condition id="-7" name="Compare instance variable" sid="4041089413412459" type="Victim">
@@ -600,7 +600,7 @@
                     </actions>
                 </event-block>
                 <comment>Init wandering</comment>
-                <event-block sid="4820190542041148">
+                <event-block disabled="1" sid="4820190542041148">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5641209091153091" type="Victim">
                             <param id="0" name="Instance variable">alertLevel</param>
@@ -619,7 +619,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="2231588733617341">
+                        <event-block disabled="1" sid="2231588733617341">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1412995753124283" type="Victim">
                                     <param id="0" name="Instance variable">tempRoom</param>
@@ -641,7 +641,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="398103293093104">
+                        <event-block disabled="1" sid="398103293093104">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5433510461197671" type="Victim">
                                     <param id="0" name="Instance variable">tempRoom</param>

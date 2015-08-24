@@ -39,6 +39,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Level1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -337,7 +338,17 @@
             <object-type name="Sono" sid="773068569439504">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8133865584038728" speed="5">
+                    <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="8133865584038728" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.125" y="0" />
+                                <point x="0.875" y="0" />
+                                <point x="0.875" y="0.923077" />
+                                <point x="0.125" y="0.923077" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="3810391761001239" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.125" y="0" />
@@ -1251,6 +1262,16 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Level1">
+            <object-type name="StacyWaypoint" sid="1127646393347991">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2840083419199652" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="Keyboard" sid="4523289223482116">
             <plugin id="Keyboard" />
         </object-type>
@@ -1265,6 +1286,14 @@
         </object-type>
         <object-type global="1" name="OrderArray" sid="8007818254883172">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="Amp" sid="9466167796084497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1454229014091103" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
