@@ -114,6 +114,29 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="7048808869873818">
+            <conditions>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="4750827854101232" type="Victim" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7831076092979127" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4150578449681229" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-13" name="Pick nth instance" sid="6075777134091573" type="System">
+                    <param id="0" name="Object">Waypoint</param>
+                    <param id="1" name="Instance">currentWaypoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="6480837806135885" type="Victim">
+                    <param id="0" name="X">Waypoint.X</param>
+                    <param id="1" name="Y">Waypoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="2835909357431654">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="5871256542904664" type="Victim">
