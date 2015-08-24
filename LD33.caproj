@@ -590,6 +590,8 @@
                     <instance-variable name="defaultRoom" sid="9607091326395451" type="number" />
                     <instance-variable name="tempRoom" sid="2484029768096959" type="number" />
                     <instance-variable name="name" sid="2181611219733451" type="string" />
+                    <instance-variable name="closestExitDistance" sid="7406878306186965" type="number" />
+                    <instance-variable name="closestExit" sid="4321961900231904" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="991920790542147">
@@ -1269,11 +1271,13 @@
     <layout-folder>
         <layout>TestLevel.xml</layout>
         <layout>Tutorial.xml</layout>
+        <layout>Level1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">
             <event-sheet>TestLevel events.xml</event-sheet>
             <event-sheet>Tutorial events.xml</event-sheet>
+            <event-sheet>Level1 events.xml</event-sheet>
         </event-folder>
         <event-sheet>Victim events.xml</event-sheet>
         <event-sheet>Player events.xml</event-sheet>
