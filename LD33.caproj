@@ -81,7 +81,7 @@
                 </behaviors>
                 <texture original-source="D:\Projects\Games\LD33\Files\top_wall_sprite.png" />
             </object-type>
-            <object-type name="Wall" sid="3539191905196565">
+            <object-type name="Wall1" sid="3539191905196565">
                 <plugin id="TiledBg" />
                 <behaviors>
                     <behavior-type name="Solid" sid="3403480701438279">
@@ -427,6 +427,111 @@
                                 <point x="0.5" y="1" />
                                 <point x="0.2" y="0.75" />
                                 <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Wall2" sid="6401012768582375">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="5880818367948855">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="ShadowCaster" sid="3217205580344706">
+                        <behavior id="shadowcaster" />
+                    </behavior-type>
+                </behaviors>
+                <texture original-source="D:\Projects\Games\LD33\Files\wall_sprite_2.png" />
+            </object-type>
+            <object-type name="Candle2" sid="1175584760414705">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9513294928337793" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\bougie_3.png">
+                            <collision-poly>
+                                <point x="0.75" y="0.5" />
+                                <point x="0.8125" y="0.875" />
+                                <point x="0.0625" y="0.958333" />
+                                <point x="0.125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bin" sid="6373238892945634">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2328586400378138" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\pubelle.png">
+                            <collision-poly>
+                                <point x="0.0769231" y="0.0833333" />
+                                <point x="0.5" y="0.0833333" />
+                                <point x="0.615385" y="0.416667" />
+                                <point x="0.615385" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="0.916667" />
+                                <point x="0" y="1" />
+                                <point x="0.0769231" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Chair" sid="2406128853274653">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="5959687596253579">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2157354326370637" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\chaise.png">
+                            <collision-poly>
+                                <point x="0.125" y="0.53125" />
+                                <point x="0.8125" y="0.53125" />
+                                <point x="0.8125" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mess" sid="8178873273506191">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1773094679310575" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\bordel_table.png">
+                            <collision-poly>
+                                <point x="0.3125" y="0.3125" />
+                                <point x="0.5" y="0.625" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="0.8125" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.3125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Table" sid="8118740367129972">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7236108438238643">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5221620125215772" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\table_basse.png">
+                            <collision-poly>
+                                <point x="0" y="0.125" />
+                                <point x="1" y="0.125" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>

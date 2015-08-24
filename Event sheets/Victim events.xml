@@ -121,7 +121,10 @@
                             <param id="0" name="Obstacle">LairDoor2</param>
                         </action>
                         <action behavior="LineOfSight" id="2" name="Add obstacle" sid="3164159450557396" type="LineOfSight">
-                            <param id="0" name="Obstacle">Wall</param>
+                            <param id="0" name="Obstacle">Wall1</param>
+                        </action>
+                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="4876160555174255" type="LineOfSight">
+                            <param id="0" name="Obstacle">Wall2</param>
                         </action>
                         <action behavior="LineOfSight" id="2" name="Add obstacle" sid="9673122442851221" type="LineOfSight">
                             <param id="0" name="Obstacle">Solid</param>
