@@ -1261,6 +1261,8 @@
                         <defaultRoom>42</defaultRoom>
                         <tempRoom>0</tempRoom>
                         <name>stacy</name>
+                        <closestExitDistance>0</closestExitDistance>
+                        <closestExit>0</closestExit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -1326,6 +1328,8 @@
                         <defaultRoom>41</defaultRoom>
                         <tempRoom>0</tempRoom>
                         <name>stacy</name>
+                        <closestExitDistance>0</closestExitDistance>
+                        <closestExit>0</closestExit>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
