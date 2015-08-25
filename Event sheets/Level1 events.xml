@@ -53,7 +53,7 @@
         <event-block sid="8518685365402856">
             <conditions>
                 <condition id="0" name="On key pressed" sid="7118329075504422" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32 (Espace)</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6516526231762395" type="Player">
                     <param id="0" name="Instance variable">psycho</param>

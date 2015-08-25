@@ -82,7 +82,7 @@
         <event-block sid="5303245665398521">
             <conditions>
                 <condition id="0" name="On key pressed" sid="5075701972963097" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32 (Espace)</param>
                 </condition>
                 <condition id="-11" name="For Each" sid="2756967223974693" type="System">
                     <param id="0" name="Object">GameOver</param>
