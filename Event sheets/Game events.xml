@@ -385,7 +385,7 @@
         <event-block sid="2546406683636792">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4385280956353915" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
+                    <param id="0" name="Key">32 (Espace)</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="8445265819460079" type="System">
                     <param id="0" name="Variable">canRestart</param>

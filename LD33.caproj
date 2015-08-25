@@ -548,6 +548,20 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Dancefloor" sid="3911447005418298">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="7212073129771823" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7182680182597975" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Actors">
             <object-type name="Player" sid="4799823387083699">
@@ -1341,6 +1355,197 @@
                 </animation>
             </animation-folder>
         </object-type>
+<<<<<<< HEAD
+        <object-type name="SplashScreenBg" sid="3487512169699625">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="meuble" sid="4878128437851467">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5025967320238807" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\meuble-cuisine.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.025" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.95" />
+                            <point x="0.125" y="0.95" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall3" sid="7803027196663614">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9892769447279327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\wall_sprite_3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="7282554863590648">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5544425048270552" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\lumiere.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.75" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.5" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="1382092679884823">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="1834022980284258" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="6" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7805791864540349" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="porteManteau2" sid="5141576518403218">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7776863701592693" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\porte_manteau_2.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0555556" />
+                            <point x="0.944444" y="0.0555556" />
+                            <point x="0.611111" y="0.5" />
+                            <point x="0.555556" y="0.555556" />
+                            <point x="0.5" y="0.555556" />
+                            <point x="0.388889" y="0.611111" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pizza_slice_2" sid="5393851020819271">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2918979655171725" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\pizza_5.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.2" />
+                            <point x="0.75" y="0.5" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0.5" y="0.6" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="why" sid="6632402199755859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3225011178544458" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\why.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.25" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.666667" y="0.5" />
+                            <point x="0.958333" y="0.5" />
+                            <point x="0.875" y="0.8125" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.291667" y="0.5625" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="frigo" sid="7130636311317136">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4766523720755749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\frigo.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.958333" y="0.0208333" />
+                            <point x="0.958333" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0416667" y="0.979167" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="2895873775071388">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7404063556108538" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\plante.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.25" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.666667" y="0.25" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.75" y="0.8125" />
+                            <point x="0.5" y="0.96875" />
+                            <point x="0.208333" y="0.84375" />
+                            <point x="0.458333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="2650400160628031">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3589291883397277" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\petite-poubelle.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.4375" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="grandePoubelle" sid="2314133077101755">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3315241072538884" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\grande_poubelle.png">
+                        <collision-poly>
+                            <point x="0.291667" y="0.291667" />
+                            <point x="0.5" y="0.666667" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.333333" y="0.5" />
+                            <point x="0.791667" y="0.791667" />
+                            <point x="0.5" y="0.708333" />
+                            <point x="0.0833333" y="0.916667" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+=======
+>>>>>>> fde161ed61914533e64374743cf35f80ca10d613
     </object-folder>
     <families />
     <layout-folder>
