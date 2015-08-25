@@ -1431,6 +1431,7 @@
                         <name>stacy</name>
                         <closestExitDistance>0</closestExitDistance>
                         <closestExit>0</closestExit>
+                        <speech>GET OFF ME YOU FREAK!</speech>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
@@ -1498,6 +1499,7 @@
                         <name>randy</name>
                         <closestExitDistance>0</closestExitDistance>
                         <closestExit>0</closestExit>
+                        <speech>GET OFF ME YOU FREAK!</speech>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">

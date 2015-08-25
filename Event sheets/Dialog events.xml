@@ -184,13 +184,19 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="7568361436799797" type="System" />
                 <condition id="-9" name="Is visible" sid="1574217145933825" type="DialogText" />
+                <condition id="-14" name="Pick by unique ID" sid="1939846099273489" type="Victim">
+                    <param id="0" name="Unique ID">talkingVictim</param>
+                </condition>
             </conditions>
             <actions>
                 <action disabled="1" id="0" name="Set text" sid="7620070746539368" type="DialogText">
                     <param id="0" name="Text">&quot;GO TO&quot; &amp; newline &amp; &quot;&lt;&quot; &amp; uppercase(RoomArray.At(roomIndex)) &amp; &quot;&gt;&quot;</param>
                 </action>
-                <action id="0" name="Set text" sid="34125679790464" type="DialogText">
+                <action disabled="1" id="0" name="Set text" sid="34125679790464" type="DialogText">
                     <param id="0" name="Text">&quot;GET OFF ME&quot; &amp; newline &amp; &quot;YOU FREAK!&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="4478313580461121" type="DialogText">
+                    <param id="0" name="Text">Victim.speech</param>
                 </action>
             </actions>
         </event-block>

@@ -603,6 +603,7 @@
                     <instance-variable name="name" sid="2181611219733451" type="string" />
                     <instance-variable name="closestExitDistance" sid="7406878306186965" type="number" />
                     <instance-variable name="closestExit" sid="4321961900231904" type="number" />
+                    <instance-variable name="speech" sid="9602545003528667" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="991920790542147">
