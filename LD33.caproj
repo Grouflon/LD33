@@ -556,7 +556,7 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7182680182597975" speed="5">
+                    <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7182680182597975" speed="2">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -1020,6 +1020,30 @@
                                 <point x="0.538462" y="0.571429" />
                                 <point x="0.461538" y="0.571429" />
                                 <point x="0.384615" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UseIcon" sid="3282962333594586">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="3851132522172499">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9270350781647866" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\engrenage.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0.1875" />
+                                <point x="0.6875" y="0.3125" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="0.875" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.1875" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1551,8 +1575,8 @@
         <event-sheet>Dialog events.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="411" />
-        <global-instance type="Mouse" uid="419" />
+        <global-instance type="Keyboard" uid="463" />
+        <global-instance type="Mouse" uid="464" />
     </global-instances>
     <sounds-folder />
     <music-folder />

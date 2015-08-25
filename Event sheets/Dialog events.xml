@@ -76,7 +76,7 @@
                 <event-block sid="8814704137233905">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="7800413171890196" type="Keyboard">
-                            <param id="0" name="Key">27 (Echap)</param>
+                            <param id="0" name="Key">27 (Esc)</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="5141959562138704" type="Victim">
                             <param id="0" name="Unique ID">talkingVictim</param>
@@ -99,7 +99,7 @@
                 <event-block sid="3731135708293337">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="5279815800297169" type="Keyboard">
-                            <param id="0" name="Key">32 (Espace)</param>
+                            <param id="0" name="Key">32 (Space)</param>
                         </condition>
                         <condition id="-14" name="Pick by unique ID" sid="2608116651077533" type="Victim">
                             <param id="0" name="Unique ID">talkingVictim</param>
