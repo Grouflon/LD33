@@ -1549,6 +1549,75 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite2" sid="5435818205695608">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2397306440165705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\tapis_grand.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.0120482" />
+                            <point x="0.96875" y="0.00903614" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.990964" />
+                            <point x="0.0416667" y="0.987952" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="7136221942829569">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7212412683560281" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\bougeoir.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.5625" y="0.78125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.375" y="0.8125" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="7927171397818759">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="636722351560487" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\bougeoir.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.15625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.5625" y="0.78125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.375" y="0.8125" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="1131595928276616">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7895221124942096" speed="3">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Projects\Games\LD33\Files\end.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="8" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1558,6 +1627,7 @@
         <layout>Level2.xml</layout>
         <layout>Level3.xml</layout>
         <layout>SplashScreen.xml</layout>
+        <layout>EndScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="Levels">
@@ -1567,6 +1637,7 @@
             <event-sheet>Level2 events.xml</event-sheet>
             <event-sheet>SplashScreen events.xml</event-sheet>
             <event-sheet>Level3 events.xml</event-sheet>
+            <event-sheet>EndScreen events.xml</event-sheet>
         </event-folder>
         <event-sheet>Victim events.xml</event-sheet>
         <event-sheet>Player events.xml</event-sheet>
