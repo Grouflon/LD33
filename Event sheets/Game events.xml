@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="canRestart" sid="805708515640847" static="0" type="number">0</variable>
         <variable constant="0" name="canExit" sid="2439739100538676" static="0" type="number">0</variable>
-        <event-block sid="9671349225144036">
+        <event-block disabled="1" sid="9671349225144036">
             <conditions>
                 <condition id="0" name="On key pressed" sid="802739320391207" type="Keyboard">
                     <param id="0" name="Key">113 (F2)</param>
