@@ -1355,11 +1355,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-<<<<<<< HEAD
-        <object-type name="SplashScreenBg" sid="3487512169699625">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="meuble" sid="4878128437851467">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1383,20 +1378,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9892769447279327" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\wall_sprite_3.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="7282554863590648">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5544425048270552" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\lumiere.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.75" />
-                            <point x="0.5" y="0.75" />
-                            <point x="0.5" y="1" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1544,8 +1525,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-=======
->>>>>>> fde161ed61914533e64374743cf35f80ca10d613
     </object-folder>
     <families />
     <layout-folder>
