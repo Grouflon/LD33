@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SplashScreenBg" uid="272">
+                <instance type="SplashScreenBg" uid="456">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -49,7 +49,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SplashScreen" uid="263">
+                <instance type="SplashScreen" uid="457">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -71,7 +71,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GameOver" uid="273">
+                <instance type="GameOver" uid="458">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -107,7 +107,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GameOver" uid="274">
+                <instance type="GameOver" uid="459">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -143,7 +143,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GameOver" uid="275">
+                <instance type="GameOver" uid="460">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -179,7 +179,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GameOver" uid="277">
+                <instance type="GameOver" uid="461">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
@@ -215,7 +215,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GameOverRestart" uid="278">
+                <instance type="GameOverRestart" uid="462">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>

@@ -556,7 +556,7 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7182680182597975" speed="5">
+                    <animation framecount="2" loop="1" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="7182680182597975" speed="2">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
@@ -617,6 +617,7 @@
                     <instance-variable name="name" sid="2181611219733451" type="string" />
                     <instance-variable name="closestExitDistance" sid="7406878306186965" type="number" />
                     <instance-variable name="closestExit" sid="4321961900231904" type="number" />
+                    <instance-variable name="speech" sid="9602545003528667" type="string" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="LineOfSight" sid="991920790542147">
@@ -1024,6 +1025,30 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="UseIcon" sid="3282962333594586">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="3851132522172499">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9270350781647866" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Projects\Games\LD33\Files\engrenage.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.25" />
+                                <point x="0.5" y="0.1875" />
+                                <point x="0.6875" y="0.3125" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.75" y="0.75" />
+                                <point x="0.5" y="0.875" />
+                                <point x="0.25" y="0.75" />
+                                <point x="0.1875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Noises">
             <object-type name="comeNoise" sid="3237996775872233">
@@ -1354,11 +1379,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-<<<<<<< HEAD
-        <object-type name="SplashScreenBg" sid="3487512169699625">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
         <object-type name="meuble" sid="4878128437851467">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1382,20 +1402,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9892769447279327" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\wall_sprite_3.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="7282554863590648">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5544425048270552" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aymeric\Documents\LD33\Files\lumiere.png">
-                        <collision-poly>
-                            <point x="0.5" y="0.75" />
-                            <point x="0.5" y="0.75" />
-                            <point x="0.5" y="1" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1543,8 +1549,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-=======
->>>>>>> fde161ed61914533e64374743cf35f80ca10d613
     </object-folder>
     <families />
     <layout-folder>
@@ -1571,8 +1575,8 @@
         <event-sheet>Dialog events.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="411" />
-        <global-instance type="Mouse" uid="419" />
+        <global-instance type="Keyboard" uid="463" />
+        <global-instance type="Mouse" uid="464" />
     </global-instances>
     <sounds-folder />
     <music-folder />

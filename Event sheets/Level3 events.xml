@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level3 events</name>
     <events>
+        <variable constant="0" name="resetRound2" sid="6953956993905837" static="0" type="number">0</variable>
+        <variable constant="0" name="resetRound1" sid="7879388712011815" static="0" type="number">0</variable>
         <variable constant="0" name="round2Waypoint" sid="8362925642895285" static="0" type="number">0</variable>
         <variable constant="0" name="round1Waypoint" sid="4060457926904449" static="0" type="number">0</variable>
         <include>Noise events</include>
@@ -78,6 +80,110 @@
             <actions>
                 <action behavior="Pathfinding" id="7" name="Set max speed" sid="8543567555772275" type="Victim">
                     <param id="0" name="Speed">140</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6717022604512896">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5051278667190038" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="8694201133017642" type="Victim">
+                    <param id="0" name="Unique ID">talkingVictim</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="4456514337818893" type="System">
+                    <param id="0" name="First value">Victim.UID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">360</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9547727384998152" type="System">
+                    <param id="0" name="Variable">resetRound1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="569951324240087">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5222698220953088" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="2332321031200839" type="Victim">
+                    <param id="0" name="Unique ID">talkingVictim</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="3217828161540912" type="System">
+                    <param id="0" name="First value">Victim.UID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">355</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7699507424876982" type="System">
+                    <param id="0" name="Variable">resetRound2</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4048592158111835">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6186361643880309" type="System" />
+                <condition id="-14" name="Compare variable" sid="1706376230166558" type="System">
+                    <param id="0" name="Variable">resetRound1</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2901057857624851" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9559783317969488" type="Waypoint">
+                    <param id="0" name="Unique ID">358</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2133260473684834" type="Victim">
+                    <param id="0" name="Unique ID">360</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9598845207403885" type="System">
+                    <param id="0" name="Variable">resetRound1</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1203875866597923" type="System">
+                    <param id="0" name="Variable">round1Waypoint</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="9205961950961372" type="Victim">
+                    <param id="0" name="X">Waypoint.X</param>
+                    <param id="1" name="Y">Waypoint.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6716335170364826">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1583877757629311" type="System" />
+                <condition id="-14" name="Compare variable" sid="8609237484606075" type="System">
+                    <param id="0" name="Variable">resetRound2</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2686446732368503" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9474687993276693" type="Victim">
+                    <param id="0" name="Unique ID">355</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8932137552260486" type="Waypoint">
+                    <param id="0" name="Unique ID">356</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7765121029534967" type="System">
+                    <param id="0" name="Variable">resetRound2</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5768455465660273" type="System">
+                    <param id="0" name="Variable">round2Waypoint</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="892939912050956" type="Victim">
+                    <param id="0" name="X">Waypoint.X</param>
+                    <param id="1" name="Y">Waypoint.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -341,6 +447,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7611467422065173">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="9425330739218956" type="Victim">
+                    <param id="0" name="Unique ID">354</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8251889873376241" type="Victim">
+                    <param id="0" name="Instance variable">fleeing</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2977288106627508" type="Player">
+                    <param id="0" name="Instance variable">talking</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="3707433432414321" type="Victim">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="5348752286726949">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2737508544617532" type="System" />

@@ -53,7 +53,7 @@
         <event-block sid="8518685365402856">
             <conditions>
                 <condition id="0" name="On key pressed" sid="7118329075504422" type="Keyboard">
-                    <param id="0" name="Key">32 (Espace)</param>
+                    <param id="0" name="Key">32 (Space)</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6516526231762395" type="Player">
                     <param id="0" name="Instance variable">psycho</param>
@@ -98,11 +98,18 @@
                 <condition id="-11" name="For Each" sid="4375153465844769" type="System">
                     <param id="0" name="Object">Sono</param>
                 </condition>
+                <condition id="-11" name="For Each" sid="1731760059998788" type="System">
+                    <param id="0" name="Object">Dancefloor</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="7482142510182154" type="Sono">
                     <param id="0" name="Animation">&quot;Play&quot;</param>
                     <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="3552723492144327" type="Dancefloor">
+                    <param id="0" name="Animation">&quot;On&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -207,6 +214,26 @@
                 <action id="-21" name="Reset global variables" sid="7901961239208863" type="System" />
                 <action id="-25" name="Go to layout (by name)" sid="9062630236049069" type="System">
                     <param id="0" name="Layout">&quot;SplashScreen&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4357065152172768">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8021708564502177" type="KillZone">
+                    <param id="0" name="Object">Amp</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5050833302182554" type="Player">
+                    <param id="0" name="Instance variable">psycho</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2056654328670293" type="System">
+                    <param id="0" name="Variable">musicOn</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="7746980382209093" type="UseIcon">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
