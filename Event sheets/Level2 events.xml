@@ -11,16 +11,19 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="1650827155654037" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-16" name="Wait" sid="1450430250512511" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="8391287823410095">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="5834646888114403" type="Victim">
                             <param id="0" name="Unique ID">228</param>
                         </condition>
-                        <condition id="-13" name="Pick nth instance" sid="8489751434090226" type="System">
-                            <param id="0" name="Object">Waypoint</param>
-                            <param id="1" name="Instance">currentWaypoint</param>
+                        <condition id="-14" name="Pick by unique ID" sid="8489751434090226" type="Waypoint">
+                            <param id="0" name="Unique ID">229</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -35,9 +38,8 @@
                         <condition id="-14" name="Pick by unique ID" sid="5582775404426128" type="Victim">
                             <param id="0" name="Unique ID">262</param>
                         </condition>
-                        <condition id="-13" name="Pick nth instance" sid="8851120698568426" type="System">
-                            <param id="0" name="Object">Waypoint</param>
-                            <param id="1" name="Instance">currentWaypoint</param>
+                        <condition id="-14" name="Pick by unique ID" sid="8933990603327841" type="Waypoint">
+                            <param id="0" name="Unique ID">229</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -52,9 +54,8 @@
                         <condition id="-14" name="Pick by unique ID" sid="6542564454980693" type="Victim">
                             <param id="0" name="Unique ID">219</param>
                         </condition>
-                        <condition id="-13" name="Pick nth instance" sid="1076646703548985" type="System">
-                            <param id="0" name="Object">Waypoint</param>
-                            <param id="1" name="Instance">currentWaypoint</param>
+                        <condition id="-14" name="Pick by unique ID" sid="4816431941496004" type="Waypoint">
+                            <param id="0" name="Unique ID">229</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -123,7 +124,7 @@
             </conditions>
             <actions>
                 <action behavior="Pathfinding" id="7" name="Set max speed" sid="5169371859847379" type="Victim">
-                    <param id="0" name="Speed">100</param>
+                    <param id="0" name="Speed">90</param>
                 </action>
             </actions>
         </event-block>
@@ -151,7 +152,7 @@
                 </action>
                 <action id="-21" name="Reset global variables" sid="5532037933425123" type="System" />
                 <action id="-25" name="Go to layout (by name)" sid="136289943171739" type="System">
-                    <param id="0" name="Layout">&quot;Tutorial&quot;</param>
+                    <param id="0" name="Layout">&quot;Level3&quot;</param>
                 </action>
             </actions>
         </event-block>

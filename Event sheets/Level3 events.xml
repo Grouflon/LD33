@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level3 events</name>
+    <events>
+        <variable constant="0" name="round2Waypoint" sid="8362925642895285" static="0" type="number">0</variable>
+        <variable constant="0" name="round1Waypoint" sid="4060457926904449" static="0" type="number">0</variable>
+        <include>Noise events</include>
+        <include>Game events</include>
+        <include>Player events</include>
+        <include>Victim events</include>
+        <event-block sid="4602897119073385">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6945139656432615" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="4450029166052366" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="576402866949766">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7380304604890848" type="Victim">
+                            <param id="0" name="Unique ID">360</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="45562792375358" type="Waypoint">
+                            <param id="0" name="Unique ID">358</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="8449423513233637" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7512688541274055">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6672373178423501" type="Victim">
+                            <param id="0" name="Unique ID">355</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="7326993939039849" type="Waypoint">
+                            <param id="0" name="Unique ID">356</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="113571677464637" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3023108396441217">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3868133843431261" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="7" name="Set max speed" sid="2572547934702633" type="Victim">
+                    <param id="0" name="Speed">80</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4954809144327967">
+            <conditions>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="4648766509232585" type="Victim">
+                    <param id="0" name="Instance variable">alertLevel</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="7" name="Set max speed" sid="8543567555772275" type="Victim">
+                    <param id="0" name="Speed">140</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="3891681124148526" title="Round1">
+            <sub-events>
+                <event-block sid="6900602416574578">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="5562619634585043" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="3482519895680174" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">360</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9587866314837785" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2319776105285154" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1411309707983275" type="System">
+                            <param id="0" name="Variable">round1Waypoint</param>
+                            <param id="1" name="Value">(round1Waypoint+1)%2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7133914320229624">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="6863024176199533" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="6897533055287122" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">360</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="503794469675179" type="System">
+                            <param id="0" name="Variable">round1Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9013375531134661" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2578168792366786" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9753041371225313" type="Waypoint">
+                            <param id="0" name="Unique ID">358</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="8768117260874397" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6943379334078981" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6333498960596741">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="2519971906357557" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="3996150622240589" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">360</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1798696858464079" type="System">
+                            <param id="0" name="Variable">round1Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2847751396958933" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3525041204630848" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2890726668549802" type="Waypoint">
+                            <param id="0" name="Unique ID">359</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2281953797334052" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="7855133642316516" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9636207374426636" title="Round2">
+            <sub-events>
+                <event-block sid="6900602416574578">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="5562619634585043" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="3482519895680174" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">355</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9587866314837785" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2319776105285154" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1411309707983275" type="System">
+                            <param id="0" name="Variable">round2Waypoint</param>
+                            <param id="1" name="Value">(round2Waypoint+1)%4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7133914320229624">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="6863024176199533" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="1986403563366428" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">355</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="503794469675179" type="System">
+                            <param id="0" name="Variable">round2Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9013375531134661" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2578168792366786" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="9753041371225313" type="Waypoint">
+                            <param id="0" name="Unique ID">356</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6943379334078981" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6333498960596741">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="2519971906357557" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="3666470633592491" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">355</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1798696858464079" type="System">
+                            <param id="0" name="Variable">round2Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2847751396958933" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3525041204630848" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2890726668549802" type="Waypoint">
+                            <param id="0" name="Unique ID">357</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="636571766341424" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="7855133642316516" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5069482422315061">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="5992243555203668" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="4868218864035524" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">355</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2861687856426143" type="System">
+                            <param id="0" name="Variable">round2Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5557016370301587" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9099985156774884" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="7112272034944542" type="Waypoint">
+                            <param id="0" name="Unique ID">326</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9034545210736558" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7311396910332309">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="5" name="On arrived" sid="5208526326488489" type="Victim" />
+                        <condition id="-8" name="Compare two values" sid="8724148165546015" type="System">
+                            <param id="0" name="First value">Victim.UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">355</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2922781971920442" type="System">
+                            <param id="0" name="Variable">round2Waypoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7060666609688116" type="Victim">
+                            <param id="0" name="Instance variable">fleeing</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5961839979394678" type="Victim">
+                            <param id="0" name="Instance variable">alertLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3349273693491957" type="Waypoint">
+                            <param id="0" name="Unique ID">357</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="6986266845725613" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6085077161606408" type="Victim">
+                            <param id="0" name="X">Waypoint.X</param>
+                            <param id="1" name="Y">Waypoint.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="5348752286726949">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2737508544617532" type="System" />
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="9195993633035536" type="System">
+                    <param id="0" name="Tag">&quot;victory&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="3709230471554428" type="System" />
+                <action id="-25" name="Go to layout (by name)" sid="9442339588523282" type="System">
+                    <param id="0" name="Layout">&quot;Level1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
